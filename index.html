@@ -35,7 +35,7 @@
         html { scroll-behavior: smooth; }
         body { font-family: var(--font-body); background: var(--warm-white); color: var(--midnight); line-height: 1.7; overflow-x: hidden; }
         
-        .lang-switcher { position: fixed; top: 1.5rem; right: 1.5rem; z-index: 1000; display: flex; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-radius: 50px; padding: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+        .lang-switcher { position: fixed; top: 1.5rem; right: 8rem; z-index: 1000; display: flex; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-radius: 50px; padding: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
         .lang-btn { padding: 0.5rem 1rem; border: none; background: transparent; font-family: var(--font-body); font-weight: 600; font-size: 0.85rem; cursor: pointer; border-radius: 50px; transition: all 0.3s ease; color: var(--deep-blue); }
         .lang-btn.active { background: var(--gradient-gold); color: var(--midnight); }
         .lang-btn:hover:not(.active) { background: var(--mist); }
@@ -69,7 +69,7 @@
         .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 0.5rem 1rem; border-radius: 50px; color: var(--gold-light); font-size: 0.9rem; font-weight: 500; margin-bottom: 2rem; animation: fadeInUp 0.8s ease forwards; opacity: 0; }
         .hero-badge::before { content: '📍'; }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        .hero-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 700; color: var(--cream); line-height: 1.15; margin-bottom: 1.5rem; animation: fadeInUp 0.8s ease 0.2s forwards; opacity: 0; }
+        .hero-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 700; color: var(--cream); line-height: 1.2; margin-bottom: 2.5rem; animation: fadeInUp 0.8s ease 0.2s forwards; opacity: 0; }
         .hero-title span { display: block; background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .hero-subtitle { font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--mist); max-width: 600px; margin-bottom: 2.5rem; font-weight: 300; animation: fadeInUp 0.8s ease 0.4s forwards; opacity: 0; }
         .hero-date { display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 3rem; animation: fadeInUp 0.8s ease 0.6s forwards; opacity: 0; }
@@ -84,9 +84,9 @@
         .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(214,158,46,0.4); }
         .btn-secondary { background: transparent; color: var(--cream); border: 2px solid rgba(255,255,255,0.3); }
         .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: var(--gold); }
-        .scroll-indicator { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: var(--mist); font-size: 0.85rem; animation: bounce 2s infinite; }
-        @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(10px); } }
-        .scroll-indicator::after { content: '↓'; font-size: 1.2rem; }
+        .back-to-top { position: fixed; bottom: 2rem; right: 2rem; width: 50px; height: 50px; background: var(--gradient-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--midnight); font-size: 1.5rem; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; box-shadow: 0 5px 20px rgba(214,158,46,0.4); z-index: 999; border: none; }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(214,158,46,0.5); }
         
         .about { padding: var(--section-padding) 2rem; background: var(--warm-white); }
         .section-container { max-width: 1200px; margin: 0 auto; }
@@ -199,7 +199,8 @@
             .schedule-item { grid-template-columns: 1fr; gap: 0.5rem; }
             .footer-content { grid-template-columns: 1fr; text-align: center; }
             .footer-social { justify-content: center; }
-            .lang-switcher { top: auto; bottom: 1rem; right: 1rem; }
+            .lang-switcher { top: auto; bottom: 5rem; right: 1rem; }
+            .back-to-top { bottom: 1.5rem; right: 1rem; width: 45px; height: 45px; }
             .speaker-card { flex: 0 0 260px; }
         }
         @media (max-width: 480px) {
@@ -275,9 +276,10 @@
                 <a href="#about" class="btn btn-secondary" data-lang="en">Learn More</a>
             </div>
         </div>
-        <div class="scroll-indicator" data-lang="ka">გადაახვიე ქვემოთ</div>
-        <div class="scroll-indicator" data-lang="en">Scroll Down</div>
     </section>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
 
     <section class="about" id="about">
         <div class="section-container">
@@ -537,7 +539,12 @@
 
         window.addEventListener('scroll', () => {
             document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 100);
+            document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 500);
         });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
 
         function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
 

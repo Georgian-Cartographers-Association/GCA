@@ -1,4 +1,4 @@
-# 🗺️ GCA Conference 2025
+# 🗺️ GCA Conference 2026
 
 **საქართველოს კარტოგრაფთა ასოციაციის კონფერენციის ვებგვერდი**
 
@@ -130,4 +130,4 @@ This website and its source code are the exclusive property of the Georgian Cart
 
 ---
 
-© 2025 Georgian Cartographers Association / საქართველოს კარტოგრაფთა ასოციაცია
+© 2026 Georgian Cartographers Association / საქართველოს კარტოგრაფთა ასოციაცია

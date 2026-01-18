@@ -6,10 +6,6 @@
     <title>GCA 2026 | საქართველოს კარტოგრაფთა ასოციაციის კონფერენცია</title>
     <meta name="description" content="საქართველოს კარტოგრაფთა ასოციაციის საერთაშორისო კონფერენცია 2026">
     <link rel="canonical" href="https://gca.qgis.ge">
-    <meta property="og:title" content="GCA Conference 2026">
-    <meta property="og:description" content="Georgian Cartographers Association Conference">
-    <meta property="og:url" content="https://gca.qgis.ge">
-    <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -35,23 +31,7 @@
         html { scroll-behavior: smooth; }
         body { font-family: var(--font-body); background: var(--warm-white); color: var(--midnight); line-height: 1.7; overflow-x: hidden; }
         
-       .lang-switcher {
-            display: flex;
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 50px;
-            padding: 4px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            margin-left: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            .lang-switcher {
-                order: 3;
-                margin-top: 1rem;
-            }
-        }
-
+        .lang-switcher { display: flex; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-radius: 50px; padding: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); margin-left: 1rem; }
         .lang-btn { padding: 0.5rem 1rem; border: none; background: transparent; font-family: var(--font-body); font-weight: 600; font-size: 0.85rem; cursor: pointer; border-radius: 50px; transition: all 0.3s ease; color: var(--deep-blue); }
         .lang-btn.active { background: var(--gradient-gold); color: var(--midnight); }
         .lang-btn:hover:not(.active) { background: var(--mist); }
@@ -66,12 +46,12 @@
         .nav.scrolled .nav-logo { color: var(--midnight); }
         .nav-logo-icon { width: 45px; height: 45px; background: var(--gradient-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
         .nav-logo-text { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; letter-spacing: 1px; }
-        .nav-menu { display: flex; gap: 2.5rem; list-style: none; }
-        .nav-link { text-decoration: none; color: var(--cream); font-weight: 500; font-size: 0.95rem; position: relative; transition: color 0.3s; }
+        .nav-menu { display: flex; gap: 1.2rem; list-style: none; flex-wrap: wrap; align-items: center; }
+        .nav-link { text-decoration: none; color: var(--cream); font-weight: 500; font-size: 0.85rem; position: relative; transition: color 0.3s; }
         .nav.scrolled .nav-link { color: var(--midnight); }
         .nav-link::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--gold); transition: width 0.3s ease; }
         .nav-link:hover::after { width: 100%; }
-        .nav-cta { background: var(--gradient-gold); color: var(--midnight); padding: 0.6rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: transform 0.3s, box-shadow 0.3s; }
+        .nav-cta { background: var(--gradient-gold); color: var(--midnight); padding: 0.5rem 1.2rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: transform 0.3s, box-shadow 0.3s; }
         .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(214,158,46,0.4); }
         .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
         .nav-toggle span { width: 25px; height: 2px; background: var(--cream); transition: all 0.3s; }
@@ -81,33 +61,12 @@
         .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 20% 80%, rgba(214,158,46,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(39,103,73,0.1) 0%, transparent 50%); pointer-events: none; }
         .hero-pattern { position: absolute; inset: 0; opacity: 0.08; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3Ccircle cx='400' cy='400' r='50'/%3E%3Ccircle cx='400' cy='400' r='100'/%3E%3Ccircle cx='400' cy='400' r='150'/%3E%3Ccircle cx='400' cy='400' r='200'/%3E%3Ccircle cx='400' cy='400' r='250'/%3E%3Ccircle cx='400' cy='400' r='300'/%3E%3Ccircle cx='400' cy='400' r='350'/%3E%3C/g%3E%3C/svg%3E"); background-size: 600px; animation: rotate 120s linear infinite; }
         @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         .hero-content { max-width: 1400px; margin: 0 auto; padding: 8rem 2rem 4rem; position: relative; z-index: 10; }
         .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 0.5rem 1rem; border-radius: 50px; color: var(--gold-light); font-size: 0.9rem; font-weight: 500; margin-bottom: 2rem; animation: fadeInUp 0.8s ease forwards; opacity: 0; }
         .hero-badge::before { content: '📍'; }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        .hero-title {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    font-weight: 700;
-    color: var(--cream);
-    line-height: 1.3;
-    margin-bottom: 2.5rem;
-    padding-bottom: 0.15em;
-    animation: fadeInUp 0.8s ease 0.2s forwards;
-    opacity: 0;
-}
-
-.hero-title span {
-    display: inline-block;
-    background: var(--gradient-gold);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1.3;
-    padding-bottom: 0.2em;
-}
-
-        
+        .hero-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 700; color: var(--cream); line-height: 1.3; margin-bottom: 2.5rem; animation: fadeInUp 0.8s ease 0.2s forwards; opacity: 0; }
+        .hero-title span { display: inline-block; background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .hero-subtitle { font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--mist); max-width: 600px; margin-bottom: 2.5rem; font-weight: 300; animation: fadeInUp 0.8s ease 0.4s forwards; opacity: 0; }
         .hero-date { display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 3rem; animation: fadeInUp 0.8s ease 0.6s forwards; opacity: 0; }
         .hero-date-item { display: flex; align-items: center; gap: 0.75rem; color: var(--cream); }
@@ -123,173 +82,179 @@
         .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: var(--gold); }
         .back-to-top { position: fixed; bottom: 2rem; right: 2rem; width: 50px; height: 50px; background: var(--gradient-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--midnight); font-size: 1.5rem; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; box-shadow: 0 5px 20px rgba(214,158,46,0.4); z-index: 999; border: none; }
         .back-to-top.visible { opacity: 1; visibility: visible; }
-        .back-to-top:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(214,158,46,0.5); }
         
-        .about { padding: var(--section-padding) 2rem; background: var(--warm-white); }
+        .section { padding: var(--section-padding) 2rem; }
+        .section-alt { background: var(--cream); }
+        .section-dark { background: var(--midnight); color: var(--cream); }
+        .section-blue { background: linear-gradient(135deg, var(--deep-blue) 0%, var(--ocean) 100%); color: var(--cream); position: relative; overflow: hidden; }
+        .section-blue::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='0.5' opacity='0.1' d='M0 50 Q25 25 50 50 T100 50'/%3E%3C/svg%3E"); background-size: 200px; }
         .section-container { max-width: 1200px; margin: 0 auto; }
         .section-header { text-align: center; margin-bottom: 4rem; }
         .section-label { display: inline-block; color: var(--gold); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
         .section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); color: var(--midnight); margin-bottom: 1rem; }
+        .section-dark .section-title, .section-blue .section-title { color: var(--cream); }
         .section-subtitle { color: var(--ocean); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
-        .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-        .about-card { background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; position: relative; overflow: hidden; }
-        .about-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient-gold); }
-        .about-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
-        .about-card-icon { width: 60px; height: 60px; background: linear-gradient(135deg, var(--cream) 0%, var(--mist) 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 1.5rem; }
-        .about-card h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--midnight); margin-bottom: 1rem; }
-        .about-card p { color: var(--ocean); line-height: 1.8; }
+        .section-dark .section-subtitle, .section-blue .section-subtitle { color: var(--mist); }
         
-        .speakers { padding: var(--section-padding) 2rem; background: linear-gradient(180deg, var(--cream) 0%, var(--warm-white) 100%); overflow: hidden; }
-        .speakers-slider-container { position: relative; max-width: 1400px; margin: 0 auto; }
-        .speakers-slider { display: flex; gap: 1.5rem; overflow-x: auto; scroll-behavior: smooth; padding: 1rem 0 2rem; scrollbar-width: none; -ms-overflow-style: none; }
-        .speakers-slider::-webkit-scrollbar { display: none; }
-        .speaker-card { flex: 0 0 280px; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.06); transition: transform 0.3s; }
-        .speaker-card:hover { transform: translateY(-5px); }
-        .speaker-image { height: 200px; background: var(--gradient-hero); position: relative; display: flex; align-items: center; justify-content: center; }
-        .speaker-placeholder { width: 100px; height: 100px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--gold); }
-        .speaker-info { padding: 1.5rem; text-align: center; }
-        .speaker-name { font-family: var(--font-display); font-size: 1.2rem; color: var(--midnight); margin-bottom: 0.5rem; }
-        .speaker-role { color: var(--gold); font-weight: 500; font-size: 0.85rem; margin-bottom: 0.5rem; }
-        .speaker-org { color: var(--ocean); font-size: 0.85rem; }
-        .slider-nav { display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 2rem; }
-        .slider-btn { width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--gold); background: white; color: var(--gold); font-size: 1.5rem; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; }
-        .slider-btn:hover { background: var(--gold); color: white; }
-        .slider-dots { display: flex; gap: 0.5rem; }
-        .slider-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--mist); cursor: pointer; transition: all 0.3s; }
-        .slider-dot.active { background: var(--gold); width: 30px; border-radius: 5px; }
-        .auto-scroll-toggle { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--ocean); cursor: pointer; user-select: none; }
-        .auto-scroll-toggle input { accent-color: var(--gold); }
-        
-        .schedule { padding: var(--section-padding) 2rem; background: var(--midnight); color: var(--cream); }
-        .schedule .section-title { color: var(--cream); }
-        .schedule .section-subtitle { color: var(--mist); }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .card { background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; position: relative; overflow: hidden; }
+        .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient-gold); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+        .card-icon { width: 60px; height: 60px; background: linear-gradient(135deg, var(--cream) 0%, var(--mist) 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 1.5rem; }
+        .card h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--midnight); margin-bottom: 1rem; }
+        .card p { color: var(--ocean); line-height: 1.8; }
+
+        .organizers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .organizer-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.06); transition: transform 0.3s; text-align: center; }
+        .organizer-card:hover { transform: translateY(-5px); }
+        .organizer-image { height: 120px; background: var(--gradient-hero); display: flex; align-items: center; justify-content: center; }
+        .organizer-placeholder { width: 70px; height: 70px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--gold); }
+        .organizer-info { padding: 1.5rem; }
+        .organizer-name { font-family: var(--font-display); font-size: 1.1rem; color: var(--midnight); margin-bottom: 0.5rem; }
+        .organizer-role { color: var(--gold); font-weight: 500; font-size: 0.85rem; }
+
         .schedule-tabs { display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap; }
         .schedule-tab { padding: 1rem 2rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 50px; color: var(--mist); font-weight: 500; cursor: pointer; transition: all 0.3s; }
         .schedule-tab.active, .schedule-tab:hover { background: var(--gradient-gold); color: var(--midnight); border-color: transparent; }
         .schedule-content { display: none; }
         .schedule-content.active { display: block; }
-        .schedule-item { display: grid; grid-template-columns: 120px 1fr; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .schedule-time { color: var(--gold); font-weight: 600; font-size: 1.1rem; }
-        .schedule-details h4 { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 0.5rem; }
-        .schedule-details p { color: var(--mist); font-size: 0.95rem; }
-        .schedule-speaker { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.75rem; color: var(--gold-light); font-size: 0.9rem; }
-        
-        .venue { padding: var(--section-padding) 2rem; background: var(--warm-white); }
-        .venue-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        .venue-map { height: 400px; background: var(--mist); border-radius: 20px; overflow: hidden; position: relative; }
-        #map { width: 100%; height: 100%; }
-        .venue-info h3 { font-family: var(--font-display); font-size: 1.8rem; color: var(--midnight); margin-bottom: 1.5rem; }
-        .venue-details { display: flex; flex-direction: column; gap: 1.5rem; }
-        .venue-detail { display: flex; gap: 1rem; align-items: flex-start; }
-        .venue-detail-icon { width: 50px; height: 50px; background: linear-gradient(135deg, var(--cream) 0%, var(--mist) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
-        .venue-detail-text h4 { color: var(--midnight); font-weight: 600; margin-bottom: 0.25rem; }
-        .venue-detail-text p { color: var(--ocean); font-size: 0.95rem; }
-        
-        .registration { padding: var(--section-padding) 2rem; background: linear-gradient(135deg, var(--deep-blue) 0%, var(--ocean) 100%); position: relative; overflow: hidden; }
-        .registration::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='0.5' opacity='0.1' d='M0 50 Q25 25 50 50 T100 50'/%3E%3C/svg%3E"); background-size: 200px; }
-        .registration .section-title, .registration .section-subtitle { color: var(--cream); }
-        .registration .section-label { color: var(--gold-light); }
+        .schedule-item { display: grid; grid-template-columns: 100px 1fr; gap: 2rem; padding: 1.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .schedule-time { color: var(--gold); font-weight: 600; font-size: 1rem; }
+        .schedule-details h4 { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .schedule-details p { color: var(--mist); font-size: 0.9rem; }
+        .schedule-speaker { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem; color: var(--gold-light); font-size: 0.85rem; }
+
+        .tour-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .tour-image { height: 350px; background: linear-gradient(135deg, var(--deep-blue) 0%, var(--forest) 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+        .tour-info h3 { font-family: var(--font-display); font-size: 1.6rem; color: var(--midnight); margin-bottom: 1.5rem; }
+        .tour-details { display: flex; flex-direction: column; gap: 1.2rem; }
+        .tour-detail { display: flex; gap: 1rem; align-items: flex-start; }
+        .tour-detail-icon { width: 45px; height: 45px; background: linear-gradient(135deg, var(--cream) 0%, var(--mist) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+        .tour-detail-text h4 { color: var(--midnight); font-weight: 600; margin-bottom: 0.2rem; font-size: 0.95rem; }
+        .tour-detail-text p { color: var(--ocean); font-size: 0.9rem; }
+
+        .exhibition-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .exhibition-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.06); }
+        .exhibition-image { height: 180px; background: var(--gradient-hero); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+        .exhibition-info { padding: 1.5rem; }
+        .exhibition-info h3 { font-family: var(--font-display); font-size: 1.2rem; color: var(--midnight); margin-bottom: 0.75rem; }
+        .exhibition-info p { color: var(--ocean); line-height: 1.7; font-size: 0.95rem; }
+
+        .submission-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+        .submission-info, .submission-timeline { background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.06); }
+        .submission-info h3, .submission-timeline h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--midnight); margin-bottom: 1.5rem; }
+        .submission-list { list-style: none; margin-bottom: 1.5rem; }
+        .submission-list li { padding: 0.6rem 0; border-bottom: 1px solid var(--mist); display: flex; align-items: center; gap: 0.75rem; font-size: 0.95rem; }
+        .submission-list li::before { content: '✓'; color: var(--gold); font-weight: bold; }
+        .timeline-item { display: flex; gap: 1.5rem; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--mist); }
+        .timeline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .timeline-date { min-width: 90px; color: var(--gold); font-weight: 600; font-size: 0.9rem; }
+        .timeline-content h4 { color: var(--midnight); margin-bottom: 0.2rem; font-size: 0.95rem; }
+
         .registration-content { position: relative; z-index: 10; }
-        .google-form-container { background: white; border-radius: 20px; padding: 2rem; max-width: 800px; margin: 0 auto; text-align: center; }
-        .google-form-container h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--midnight); margin-bottom: 1rem; }
+        .google-form-container { background: white; border-radius: 20px; padding: 2.5rem; max-width: 700px; margin: 0 auto; text-align: center; }
+        .google-form-container h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--midnight); margin-bottom: 1rem; }
         .google-form-container p { color: var(--ocean); margin-bottom: 1.5rem; }
-        .form-link-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--gradient-gold); color: var(--midnight); padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s; }
+        .form-link-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--gradient-gold); color: var(--midnight); padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s; }
         .form-link-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(214,158,46,0.4); }
-        
-        .contact { padding: var(--section-padding) 2rem; background: var(--warm-white); }
+
+        .proceedings-content { background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.06); max-width: 900px; margin: 0 auto; }
+        .proceedings-content h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--midnight); margin-bottom: 1rem; margin-top: 2rem; }
+        .proceedings-content h3:first-child { margin-top: 0; }
+        .proceedings-content p { color: var(--ocean); line-height: 1.8; margin-bottom: 0.75rem; }
+        .proceedings-content ul { list-style: none; margin: 1rem 0; }
+        .proceedings-content ul li { padding: 0.4rem 0 0.4rem 1.5rem; position: relative; color: var(--ocean); }
+        .proceedings-content ul li::before { content: '•'; color: var(--gold); position: absolute; left: 0; font-weight: bold; }
+
+        .venue-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .venue-map { height: 350px; background: var(--mist); border-radius: 20px; overflow: hidden; }
+        #map { width: 100%; height: 100%; }
+        .venue-info h3 { font-family: var(--font-display); font-size: 1.6rem; color: var(--midnight); margin-bottom: 1.5rem; }
+        .venue-details { display: flex; flex-direction: column; gap: 1.2rem; }
+        .venue-detail { display: flex; gap: 1rem; align-items: flex-start; }
+        .venue-detail-icon { width: 45px; height: 45px; background: linear-gradient(135deg, var(--cream) 0%, var(--mist) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+        .venue-detail-text h4 { color: var(--midnight); font-weight: 600; margin-bottom: 0.2rem; font-size: 0.95rem; }
+        .venue-detail-text p { color: var(--ocean); font-size: 0.9rem; }
+
+        .faq-container { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: white; border-radius: 15px; margin-bottom: 1rem; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .faq-question { padding: 1.25rem 1.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--midnight); transition: background 0.3s; }
+        .faq-question:hover { background: var(--cream); }
+        .faq-question::after { content: '+'; font-size: 1.5rem; color: var(--gold); transition: transform 0.3s; }
+        .faq-item.active .faq-question::after { transform: rotate(45deg); }
+        .faq-answer { padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: all 0.3s ease; }
+        .faq-item.active .faq-answer { padding: 0 1.5rem 1.25rem; max-height: 500px; }
+        .faq-answer p { color: var(--ocean); line-height: 1.7; }
+
         .contact-center { display: flex; justify-content: center; }
         .contact-info-centered { text-align: center; max-width: 500px; }
-        .contact-info-centered h3 { font-family: var(--font-display); font-size: 1.8rem; color: var(--midnight); margin-bottom: 0.5rem; }
-        .contact-info-centered .org-name-ka { color: var(--ocean); font-size: 1.1rem; margin-bottom: 2rem; }
+        .contact-info-centered h3 { font-family: var(--font-display); font-size: 1.6rem; color: var(--midnight); margin-bottom: 0.5rem; }
+        .contact-info-centered .org-name-ka { color: var(--ocean); font-size: 1rem; margin-bottom: 2rem; }
         .contact-details-centered { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
         .contact-detail { display: flex; align-items: center; justify-content: center; gap: 1rem; color: var(--midnight); }
         .contact-detail a { color: var(--midnight); text-decoration: none; transition: color 0.3s; }
         .contact-detail a:hover { color: var(--gold); }
-        .contact-detail-icon { width: 45px; height: 45px; background: linear-gradient(135deg, var(--cream) 0%, var(--mist) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+        .contact-detail-icon { width: 42px; height: 42px; background: linear-gradient(135deg, var(--cream) 0%, var(--mist) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
         .social-links-centered { display: flex; gap: 1rem; justify-content: center; }
-        .social-link { width: 50px; height: 50px; background: var(--gradient-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--midnight); text-decoration: none; font-size: 1.3rem; transition: transform 0.3s, box-shadow 0.3s; }
+        .social-link { width: 48px; height: 48px; background: var(--gradient-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--midnight); text-decoration: none; font-size: 1.2rem; transition: transform 0.3s, box-shadow 0.3s; }
         .social-link:hover { transform: translateY(-3px); box-shadow: 0 5px 20px rgba(214,158,46,0.4); }
         
         .footer { background: var(--midnight); color: var(--cream); padding: 4rem 2rem 2rem; }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; }
-        .footer-brand h3 { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 1rem; }
-        .footer-brand p { color: var(--mist); line-height: 1.8; margin-bottom: 1.5rem; font-size: 0.95rem; }
-        .footer-social { display: flex; gap: 1rem; }
-        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--cream); text-decoration: none; transition: background 0.3s; font-size: 1.1rem; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
+        .footer-brand h3 { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 1rem; }
+        .footer-brand p { color: var(--mist); line-height: 1.7; margin-bottom: 1.5rem; font-size: 0.9rem; }
+        .footer-social { display: flex; gap: 0.75rem; }
+        .footer-social a { width: 38px; height: 38px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--cream); text-decoration: none; transition: background 0.3s; font-size: 1rem; }
         .footer-social a:hover { background: var(--gold); color: var(--midnight); }
-        .footer-links h4 { color: var(--gold); font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-links h4 { color: var(--gold); font-size: 0.85rem; margin-bottom: 1.25rem; text-transform: uppercase; letter-spacing: 1px; }
         .footer-links ul { list-style: none; }
-        .footer-links li { margin-bottom: 0.75rem; }
-        .footer-links a { color: var(--mist); text-decoration: none; transition: color 0.3s; font-size: 0.95rem; }
+        .footer-links li { margin-bottom: 0.6rem; }
+        .footer-links a { color: var(--mist); text-decoration: none; transition: color 0.3s; font-size: 0.9rem; }
         .footer-links a:hover { color: var(--gold); }
-        .footer-bottom { max-width: 1200px; margin: 3rem auto 0; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; color: var(--mist); font-size: 0.9rem; }
-        
+        .footer-bottom { text-align: center; padding-top: 2rem; margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: var(--mist); font-size: 0.85rem; }
+
         @media (max-width: 1024px) {
-            .venue-content { grid-template-columns: 1fr; }
+            .nav-menu { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(255,253,247,0.98); flex-direction: column; padding: 2rem; gap: 1rem; }
+            .nav-menu.active { display: flex; }
+            .nav-link { color: var(--midnight); }
+            .nav-toggle { display: flex; }
+            .tour-content, .submission-content, .venue-content { grid-template-columns: 1fr; }
             .footer-content { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 768px) {
-            .nav-menu { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--warm-white); flex-direction: column; padding: 2rem; gap: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-            .nav-menu.active { display: flex; }
-            .nav-menu .nav-link { color: var(--midnight); }
-            .nav-toggle { display: flex; }
             .schedule-item { grid-template-columns: 1fr; gap: 0.5rem; }
             .footer-content { grid-template-columns: 1fr; text-align: center; }
             .footer-social { justify-content: center; }
-            .lang-switcher { top: auto; bottom: 5rem; right: 1rem; }
-            .back-to-top { bottom: 1.5rem; right: 1rem; width: 45px; height: 45px; }
-            .speaker-card { flex: 0 0 260px; }
-        }
-        @media (max-width: 480px) {
-            .hero-date { flex-direction: column; gap: 1rem; }
-            .hero-buttons { flex-direction: column; }
-            .btn { width: 100%; justify-content: center; }
+            .lang-switcher { order: 3; margin-top: 1rem; }
         }
     </style>
 </head>
 <body>
-
-
-   <nav class="nav" id="nav">
-    <div class="nav-container">
-
-        <a href="#" class="nav-logo">
-            <div class="nav-logo-icon">🗺️</div>
-            <span class="nav-logo-text">GCA 2026</span>
-        </a>
-
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="#about" class="nav-link" data-lang="ka">შესახებ</a></li>
-            <li><a href="#about" class="nav-link" data-lang="en">About</a></li>
-
-            <li><a href="#speakers" class="nav-link" data-lang="ka">მომხსენებლები</a></li>
-            <li><a href="#speakers" class="nav-link" data-lang="en">Speakers</a></li>
-
-            <li><a href="#schedule" class="nav-link" data-lang="ka">პროგრამა</a></li>
-            <li><a href="#schedule" class="nav-link" data-lang="en">Schedule</a></li>
-
-            <li><a href="#venue" class="nav-link" data-lang="ka">ადგილმდებარეობა</a></li>
-            <li><a href="#venue" class="nav-link" data-lang="en">Venue</a></li>
-
-            <li><a href="#registration" class="nav-cta" data-lang="ka">რეგისტრაცია</a></li>
-            <li><a href="#registration" class="nav-cta" data-lang="en">Register</a></li>
-        </ul>
-
-        <!-- Language Switcher (გატანილია UL-ის გარეთ) -->
-        <div class="lang-switcher">
-            <button class="lang-btn active" onclick="setLang('ka')">ქარ</button>
-            <button class="lang-btn" onclick="setLang('en')">ENG</button>
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="nav-logo-icon">🗺️</div>
+                <span class="nav-logo-text">GCA 2026</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link" data-lang="ka">შესახებ</a><a href="#about" class="nav-link" data-lang="en">About</a></li>
+                <li><a href="#organizers" class="nav-link" data-lang="ka">ორგანიზატორები</a><a href="#organizers" class="nav-link" data-lang="en">Organizers</a></li>
+                <li><a href="#programme" class="nav-link" data-lang="ka">პროგრამა</a><a href="#programme" class="nav-link" data-lang="en">Programme</a></li>
+                <li><a href="#tour" class="nav-link" data-lang="ka">ექსკურსია</a><a href="#tour" class="nav-link" data-lang="en">Tour</a></li>
+                <li><a href="#exhibition" class="nav-link" data-lang="ka">გამოფენა</a><a href="#exhibition" class="nav-link" data-lang="en">Exhibition</a></li>
+                <li><a href="#submission" class="nav-link" data-lang="ka">გაგზავნა</a><a href="#submission" class="nav-link" data-lang="en">Submission</a></li>
+                <li><a href="#venue" class="nav-link" data-lang="ka">ადგილი</a><a href="#venue" class="nav-link" data-lang="en">Venue</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-link" data-lang="ka">კონტაქტი</a><a href="#contact" class="nav-link" data-lang="en">Contact</a></li>
+                <li><a href="#registration" class="nav-cta" data-lang="ka">რეგისტრაცია</a><a href="#registration" class="nav-cta" data-lang="en">Register</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <button class="lang-btn active" onclick="setLang('ka')">ქარ</button>
+                <button class="lang-btn" onclick="setLang('en')">ENG</button>
+            </div>
+            <div class="nav-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></div>
         </div>
-
-        <div class="nav-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-    </div>
-</nav>
-
+    </nav>
 
     <section class="hero" id="home">
         <div class="hero-pattern"></div>
@@ -304,180 +269,252 @@
                 <div class="hero-date-item">
                     <div class="hero-date-icon">📅</div>
                     <div class="hero-date-text">
-                        <span class="hero-date-label" data-lang="ka">თარიღი</span>
-                        <span class="hero-date-label" data-lang="en">Date</span>
-                        <span class="hero-date-value" data-lang="ka">15-17 ოქტომბერი, 2026</span>
-                        <span class="hero-date-value" data-lang="en">October 15-17, 2026</span>
+                        <span class="hero-date-label" data-lang="ka">თარიღი</span><span class="hero-date-label" data-lang="en">Date</span>
+                        <span class="hero-date-value" data-lang="ka">15-17 ოქტომბერი, 2026</span><span class="hero-date-value" data-lang="en">October 15-17, 2026</span>
                     </div>
                 </div>
                 <div class="hero-date-item">
                     <div class="hero-date-icon">📍</div>
                     <div class="hero-date-text">
-                        <span class="hero-date-label" data-lang="ka">ადგილმდებარეობა</span>
-                        <span class="hero-date-label" data-lang="en">Location</span>
-                        <span class="hero-date-value" data-lang="ka">თბილისი, საქართველო</span>
-                        <span class="hero-date-value" data-lang="en">Tbilisi, Georgia</span>
+                        <span class="hero-date-label" data-lang="ka">ადგილმდებარეობა</span><span class="hero-date-label" data-lang="en">Location</span>
+                        <span class="hero-date-value" data-lang="ka">თბილისი, საქართველო</span><span class="hero-date-value" data-lang="en">Tbilisi, Georgia</span>
                     </div>
                 </div>
             </div>
             <div class="hero-buttons">
-                <a href="#registration" class="btn btn-primary" data-lang="ka">რეგისტრაცია →</a>
-                <a href="#registration" class="btn btn-primary" data-lang="en">Register Now →</a>
-                <a href="#about" class="btn btn-secondary" data-lang="ka">გაიგე მეტი</a>
-                <a href="#about" class="btn btn-secondary" data-lang="en">Learn More</a>
+                <a href="#registration" class="btn btn-primary" data-lang="ka">რეგისტრაცია →</a><a href="#registration" class="btn btn-primary" data-lang="en">Register Now →</a>
+                <a href="#about" class="btn btn-secondary" data-lang="ka">გაიგე მეტი</a><a href="#about" class="btn btn-secondary" data-lang="en">Learn More</a>
             </div>
         </div>
     </section>
 
-    <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
 
-    <section class="about" id="about">
+    <!-- About -->
+    <section class="section" id="about">
         <div class="section-container">
             <div class="section-header">
-                <span class="section-label" data-lang="ka">რა გელოდებათ</span>
-                <span class="section-label" data-lang="en">What to Expect</span>
-                <h2 class="section-title" data-lang="ka">კონფერენციის შესახებ</h2>
-                <h2 class="section-title" data-lang="en">About the Conference</h2>
-                <p class="section-subtitle" data-lang="ka">სამდღიანი ღონისძიება კარტოგრაფიისა და GIS პროფესიონალებისთვის</p>
-                <p class="section-subtitle" data-lang="en">A three-day event for cartography and GIS professionals</p>
+                <span class="section-label" data-lang="ka">რა გელოდებათ</span><span class="section-label" data-lang="en">What to Expect</span>
+                <h2 class="section-title" data-lang="ka">კონფერენციის შესახებ</h2><h2 class="section-title" data-lang="en">About the Conference</h2>
+                <p class="section-subtitle" data-lang="ka">სამდღიანი ღონისძიება კარტოგრაფიისა და GIS პროფესიონალებისთვის</p><p class="section-subtitle" data-lang="en">A three-day event for cartography and GIS professionals</p>
             </div>
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="about-card-icon">🎤</div>
-                    <h3 data-lang="ka">სამეცნიერო მოხსენებები</h3>
-                    <h3 data-lang="en">Scientific Presentations</h3>
-                    <p data-lang="ka">მოისმინეთ წამყვანი მკვლევარების პრეზენტაციები კარტოგრაფიის უახლესი მიღწევების შესახებ</p>
-                    <p data-lang="en">Listen to presentations from leading researchers about the latest achievements in cartography</p>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">🎤</div>
+                    <h3 data-lang="ka">სამეცნიერო მოხსენებები</h3><h3 data-lang="en">Scientific Presentations</h3>
+                    <p data-lang="ka">მოისმინეთ წამყვანი მკვლევარების პრეზენტაციები კარტოგრაფიის უახლესი მიღწევების შესახებ</p><p data-lang="en">Listen to presentations from leading researchers about the latest achievements in cartography</p>
                 </div>
-                <div class="about-card">
-                    <div class="about-card-icon">🛠️</div>
-                    <h3 data-lang="ka">პრაქტიკული სემინარები</h3>
-                    <h3 data-lang="en">Practical Workshops</h3>
-                    <p data-lang="ka">მიიღეთ მონაწილეობა ინტერაქტიულ სემინარებში QGIS, WebGIS და სხვა ინსტრუმენტების შესახებ</p>
-                    <p data-lang="en">Participate in interactive workshops on QGIS, WebGIS and other modern tools</p>
+                <div class="card">
+                    <div class="card-icon">🛠️</div>
+                    <h3 data-lang="ka">პრაქტიკული სემინარები</h3><h3 data-lang="en">Practical Workshops</h3>
+                    <p data-lang="ka">მიიღეთ მონაწილეობა ინტერაქტიულ სემინარებში QGIS, WebGIS და სხვა ინსტრუმენტების შესახებ</p><p data-lang="en">Participate in interactive workshops on QGIS, WebGIS and other modern tools</p>
                 </div>
-                <div class="about-card">
-                    <div class="about-card-icon">🤝</div>
-                    <h3 data-lang="ka">ნეთვორქინგი</h3>
-                    <h3 data-lang="en">Networking</h3>
-                    <p data-lang="ka">გაიცანით კოლეგები, დაამყარეთ პროფესიული კონტაქტები და იპოვეთ პარტნიორები</p>
-                    <p data-lang="en">Meet colleagues, establish professional contacts and find partners</p>
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <h3 data-lang="ka">ნეთვორქინგი</h3><h3 data-lang="en">Networking</h3>
+                    <p data-lang="ka">გაიცანით კოლეგები, დაამყარეთ პროფესიული კონტაქტები და იპოვეთ პარტნიორები</p><p data-lang="en">Meet colleagues, establish professional contacts and find partners</p>
                 </div>
-                <div class="about-card">
-                    <div class="about-card-icon">🗺️</div>
-                    <h3 data-lang="ka">რუკების გამოფენა</h3>
-                    <h3 data-lang="en">Map Exhibition</h3>
-                    <p data-lang="ka">დაათვალიერეთ თანამედროვე და ისტორიული რუკების გამოფენა საქართველოს შესახებ</p>
-                    <p data-lang="en">Explore an exhibition of modern and historical maps about Georgia</p>
+                <div class="card">
+                    <div class="card-icon">🗺️</div>
+                    <h3 data-lang="ka">რუკების გამოფენა</h3><h3 data-lang="en">Map Exhibition</h3>
+                    <p data-lang="ka">დაათვალიერეთ თანამედროვე და ისტორიული რუკების გამოფენა საქართველოს შესახებ</p><p data-lang="en">Explore an exhibition of modern and historical maps about Georgia</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="speakers" id="speakers">
+    <!-- Organizers -->
+    <section class="section section-alt" id="organizers">
         <div class="section-container">
             <div class="section-header">
-                <span class="section-label" data-lang="ka">მომხსენებლები</span>
-                <span class="section-label" data-lang="en">Speakers</span>
-                <h2 class="section-title" data-lang="ka">მოწვეული სპიკერები</h2>
-                <h2 class="section-title" data-lang="en">Featured Speakers</h2>
-                <p class="section-subtitle" data-lang="ka">20+ ექსპერტი კარტოგრაფიისა და GIS სფეროდან</p>
-                <p class="section-subtitle" data-lang="en">20+ experts from cartography and GIS fields</p>
+                <span class="section-label" data-lang="ka">ორგანიზატორები</span><span class="section-label" data-lang="en">Organizers</span>
+                <h2 class="section-title" data-lang="ka">საორგანიზაციო კომიტეტი</h2><h2 class="section-title" data-lang="en">Organizing Committee</h2>
             </div>
-            <div class="speakers-slider-container">
-                <div class="speakers-slider" id="speakersSlider">
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">პროფ. გიორგი მელაძე</h3><p class="speaker-role">კარტოგრაფია და გეოდეზია</p><p class="speaker-org">თსუ გეოგრაფიის დეპარტამენტი</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">დოქ. ნინო ბერიძე</h3><p class="speaker-role">GIS და დისტანციური ზონდირება</p><p class="speaker-org">გეოინფორმატიკის ცენტრი</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">ლევან წერეთელი</h3><p class="speaker-role">WebGIS განვითარება</p><p class="speaker-org">GIS Technologies</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">მარიამ კაპანაძე</h3><p class="speaker-role">სივრცითი ანალიზი</p><p class="speaker-org">ურბანული კვლევების ინსტიტუტი</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">დავით ჯავახიშვილი</h3><p class="speaker-role">3D მოდელირება</p><p class="speaker-org">არქიტექტურის ფაკულტეტი</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">ანა გოგიჩაიშვილი</h3><p class="speaker-role">გარემოს მონიტორინგი</p><p class="speaker-org">გარემოს სააგენტო</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">პროფ. ზაალ კიკნაძე</h3><p class="speaker-role">ისტორიული კარტოგრაფია</p><p class="speaker-org">ეროვნული არქივი</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">თამარ ლომიძე</h3><p class="speaker-role">კადასტრი და მიწათმოწყობა</p><p class="speaker-org">NAPR</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">გიორგი ხარაიშვილი</h3><p class="speaker-role">დრონების გამოყენება</p><p class="speaker-org">Aeromapping Georgia</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">დოქ. ეკა სულაბერიძე</h3><p class="speaker-role">კლიმატის მოდელირება</p><p class="speaker-org">ჰიდრომეტეოროლოგია</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">ნიკა ბაქრაძე</h3><p class="speaker-role">OpenStreetMap</p><p class="speaker-org">OSM Georgia</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">სალომე თურმანიძე</h3><p class="speaker-role">GeoServer & PostGIS</p><p class="speaker-org">IT კონსალტინგი</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">პროფ. ირაკლი მაისურაძე</h3><p class="speaker-role">გეომორფოლოგია</p><p class="speaker-org">ილიას უნივერსიტეტი</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">ნათია ჩხეიძე</h3><p class="speaker-role">ტურიზმის რუკები</p><p class="speaker-org">ტურიზმის ადმინისტრაცია</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">ალექსანდრე ზარანდია</h3><p class="speaker-role">ტრანსპორტის GIS</p><p class="speaker-org">თბილისის მერია</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">მაია წიკლაური</h3><p class="speaker-role">სოფლის მეურნეობის GIS</p><p class="speaker-org">აგრარული უნივერსიტეტი</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">დოქ. გიორგი გაბუნია</h3><p class="speaker-role">სეისმური რისკები</p><p class="speaker-org">გეოფიზიკის ინსტიტუტი</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">თეონა მამულაშვილი</h3><p class="speaker-role">კარტოგრაფიული დიზაინი</p><p class="speaker-org">Geocartography Ltd</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">ბექა ლომთაძე</h3><p class="speaker-role">LiDAR ტექნოლოგიები</p><p class="speaker-org">GeoPro</p></div></div>
-                    <div class="speaker-card"><div class="speaker-image"><div class="speaker-placeholder">👤</div></div><div class="speaker-info"><h3 class="speaker-name">Dr. Sarah Mitchell</h3><p class="speaker-role">საერთაშორისო სპიკერი</p><p class="speaker-org">ICA</p></div></div>
+            <div class="organizers-grid">
+                <div class="organizer-card">
+                    <div class="organizer-image"><div class="organizer-placeholder">🏛️</div></div>
+                    <div class="organizer-info">
+                        <h3 class="organizer-name" data-lang="ka">საქართველოს კარტოგრაფთა ასოციაცია</h3><h3 class="organizer-name" data-lang="en">Georgian Cartographers Association</h3>
+                        <p class="organizer-role" data-lang="ka">მთავარი ორგანიზატორი</p><p class="organizer-role" data-lang="en">Main Organizer</p>
+                    </div>
                 </div>
-                <div class="slider-nav">
-                    <button class="slider-btn" onclick="slideLeft()">←</button>
-                    <div class="slider-dots" id="sliderDots"></div>
-                    <button class="slider-btn" onclick="slideRight()">→</button>
+                <div class="organizer-card">
+                    <div class="organizer-image"><div class="organizer-placeholder">🎓</div></div>
+                    <div class="organizer-info">
+                        <h3 class="organizer-name" data-lang="ka">თსუ გეოგრაფიის დეპარტამენტი</h3><h3 class="organizer-name" data-lang="en">TSU Geography Department</h3>
+                        <p class="organizer-role" data-lang="ka">თანაორგანიზატორი</p><p class="organizer-role" data-lang="en">Co-organizer</p>
+                    </div>
                 </div>
-                <div style="text-align: center; margin-top: 1rem;">
-                    <label class="auto-scroll-toggle">
-                        <input type="checkbox" id="autoScrollToggle" checked onchange="toggleAutoScroll()">
-                        <span data-lang="ka">ავტომატური გადაცურება</span>
-                        <span data-lang="en">Auto-scroll</span>
-                    </label>
+                <div class="organizer-card">
+                    <div class="organizer-image"><div class="organizer-placeholder">🌍</div></div>
+                    <div class="organizer-info">
+                        <h3 class="organizer-name" data-lang="ka">ICA - საერთაშორისო კარტოგრაფიული ასოციაცია</h3><h3 class="organizer-name" data-lang="en">ICA - International Cartographic Association</h3>
+                        <p class="organizer-role" data-lang="ka">პარტნიორი</p><p class="organizer-role" data-lang="en">Partner</p>
+                    </div>
+                </div>
+                <div class="organizer-card">
+                    <div class="organizer-image"><div class="organizer-placeholder">📊</div></div>
+                    <div class="organizer-info">
+                        <h3 class="organizer-name" data-lang="ka">საქსტატი</h3><h3 class="organizer-name" data-lang="en">GeoStat</h3>
+                        <p class="organizer-role" data-lang="ka">პარტნიორი</p><p class="organizer-role" data-lang="en">Partner</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="schedule" id="schedule">
+    <!-- Programme -->
+    <section class="section section-dark" id="programme">
         <div class="section-container">
             <div class="section-header">
-                <span class="section-label" data-lang="ka">პროგრამა</span>
-                <span class="section-label" data-lang="en">Schedule</span>
-                <h2 class="section-title" data-lang="ka">კონფერენციის განრიგი</h2>
-                <h2 class="section-title" data-lang="en">Conference Schedule</h2>
+                <span class="section-label" data-lang="ka">პროგრამა</span><span class="section-label" data-lang="en">Programme</span>
+                <h2 class="section-title" data-lang="ka">კონფერენციის განრიგი</h2><h2 class="section-title" data-lang="en">Conference Schedule</h2>
             </div>
             <div class="schedule-tabs">
-                <button class="schedule-tab active" onclick="showDay(1)" data-lang="ka">დღე 1</button>
-                <button class="schedule-tab active" onclick="showDay(1)" data-lang="en">Day 1</button>
-                <button class="schedule-tab" onclick="showDay(2)" data-lang="ka">დღე 2</button>
-                <button class="schedule-tab" onclick="showDay(2)" data-lang="en">Day 2</button>
-                <button class="schedule-tab" onclick="showDay(3)" data-lang="ka">დღე 3</button>
-                <button class="schedule-tab" onclick="showDay(3)" data-lang="en">Day 3</button>
+                <button class="schedule-tab active" onclick="showDay(1)" data-lang="ka">დღე 1 - 15 ოქტ.</button><button class="schedule-tab active" onclick="showDay(1)" data-lang="en">Day 1 - Oct 15</button>
+                <button class="schedule-tab" onclick="showDay(2)" data-lang="ka">დღე 2 - 16 ოქტ.</button><button class="schedule-tab" onclick="showDay(2)" data-lang="en">Day 2 - Oct 16</button>
+                <button class="schedule-tab" onclick="showDay(3)" data-lang="ka">დღე 3 - 17 ოქტ.</button><button class="schedule-tab" onclick="showDay(3)" data-lang="en">Day 3 - Oct 17</button>
             </div>
             <div class="schedule-content active" id="day1">
-                <div class="schedule-item"><div class="schedule-time">09:00</div><div class="schedule-details"><h4 data-lang="ka">რეგისტრაცია</h4><h4 data-lang="en">Registration</h4><p data-lang="ka">მონაწილეთა რეგისტრაცია და ყავის შესვენება</p><p data-lang="en">Participant registration and coffee break</p></div></div>
-                <div class="schedule-item"><div class="schedule-time">10:00</div><div class="schedule-details"><h4 data-lang="ka">გახსნის ცერემონია</h4><h4 data-lang="en">Opening Ceremony</h4><p data-lang="ka">ოფიციალური გახსნა და მისალოცი სიტყვები</p><p data-lang="en">Official opening and welcome speeches</p></div></div>
-                <div class="schedule-item"><div class="schedule-time">11:00</div><div class="schedule-details"><h4 data-lang="ka">მთავარი მოხსენება</h4><h4 data-lang="en">Keynote Speech</h4><p data-lang="ka">კარტოგრაფიის თანამედროვე გამოწვევები</p><p data-lang="en">Modern challenges in cartography</p><span class="schedule-speaker">👤 პროფ. გიორგი მელაძე</span></div></div>
-                <div class="schedule-item"><div class="schedule-time">14:00</div><div class="schedule-details"><h4 data-lang="ka">სამეცნიერო სესია I</h4><h4 data-lang="en">Scientific Session I</h4><p data-lang="ka">მონაწილეთა პრეზენტაციები</p><p data-lang="en">Participant presentations</p></div></div>
-                <div class="schedule-item"><div class="schedule-time">18:00</div><div class="schedule-details"><h4 data-lang="ka">მისასალმებელი კოქტეილი</h4><h4 data-lang="en">Welcome Reception</h4><p data-lang="ka">ნეთვორქინგის საღამო</p><p data-lang="en">Networking evening</p></div></div>
+                <div class="schedule-item"><div class="schedule-time">09:00</div><div class="schedule-details"><h4 data-lang="ka">რეგისტრაცია და მისალმება</h4><h4 data-lang="en">Registration & Welcome</h4><p data-lang="ka">მონაწილეთა რეგისტრაცია და ყავის შესვენება</p><p data-lang="en">Participant registration and coffee break</p></div></div>
+                <div class="schedule-item"><div class="schedule-time">10:00</div><div class="schedule-details"><h4 data-lang="ka">გახსნის ცერემონია</h4><h4 data-lang="en">Opening Ceremony</h4></div></div>
+                <div class="schedule-item"><div class="schedule-time">11:00</div><div class="schedule-details"><h4 data-lang="ka">მთავარი მომხსენებელი: საქართველოს კარტოგრაფიის მომავალი</h4><h4 data-lang="en">Keynote: The Future of Georgian Cartography</h4><div class="schedule-speaker">👤 პროფ. გიორგი მელაძე</div></div></div>
+                <div class="schedule-item"><div class="schedule-time">14:00</div><div class="schedule-details"><h4 data-lang="ka">სამეცნიერო სესია: GIS და დისტანციური ზონდირება</h4><h4 data-lang="en">Scientific Session: GIS and Remote Sensing</h4></div></div>
+                <div class="schedule-item"><div class="schedule-time">18:00</div><div class="schedule-details"><h4 data-lang="ka">გამოფენის გახსნა</h4><h4 data-lang="en">Exhibition Opening</h4></div></div>
             </div>
             <div class="schedule-content" id="day2">
-                <div class="schedule-item"><div class="schedule-time">09:30</div><div class="schedule-details"><h4 data-lang="ka">GIS ტექნოლოგიები პრაქტიკაში</h4><h4 data-lang="en">GIS Technologies in Practice</h4><span class="schedule-speaker">👤 დოქ. ნინო ბერიძე</span></div></div>
-                <div class="schedule-item"><div class="schedule-time">11:00</div><div class="schedule-details"><h4 data-lang="ka">სემინარი: QGIS პროექტები</h4><h4 data-lang="en">Workshop: QGIS Projects</h4></div></div>
-                <div class="schedule-item"><div class="schedule-time">14:00</div><div class="schedule-details"><h4 data-lang="ka">სამეცნიერო სესია II</h4><h4 data-lang="en">Scientific Session II</h4></div></div>
-                <div class="schedule-item"><div class="schedule-time">16:30</div><div class="schedule-details"><h4 data-lang="ka">პანელური დისკუსია</h4><h4 data-lang="en">Panel Discussion</h4></div></div>
+                <div class="schedule-item"><div class="schedule-time">09:30</div><div class="schedule-details"><h4 data-lang="ka">პრაქტიკული სემინარი: QGIS მოწინავე ფუნქციები</h4><h4 data-lang="en">Workshop: Advanced QGIS Features</h4></div></div>
+                <div class="schedule-item"><div class="schedule-time">11:30</div><div class="schedule-details"><h4 data-lang="ka">სამეცნიერო სესია: WebGIS და კარტოგრაფიული დიზაინი</h4><h4 data-lang="en">Scientific Session: WebGIS and Cartographic Design</h4></div></div>
+                <div class="schedule-item"><div class="schedule-time">14:00</div><div class="schedule-details"><h4 data-lang="ka">პანელური დისკუსია: GIS განათლება საქართველოში</h4><h4 data-lang="en">Panel Discussion: GIS Education in Georgia</h4></div></div>
+                <div class="schedule-item"><div class="schedule-time">16:00</div><div class="schedule-details"><h4 data-lang="ka">პოსტერების სესია</h4><h4 data-lang="en">Poster Session</h4></div></div>
             </div>
             <div class="schedule-content" id="day3">
-                <div class="schedule-item"><div class="schedule-time">09:30</div><div class="schedule-details"><h4 data-lang="ka">AI კარტოგრაფიაში</h4><h4 data-lang="en">AI in Cartography</h4><span class="schedule-speaker">👤 Dr. Sarah Mitchell</span></div></div>
-                <div class="schedule-item"><div class="schedule-time">11:00</div><div class="schedule-details"><h4 data-lang="ka">სემინარი: სივრცითი ანალიზი</h4><h4 data-lang="en">Workshop: Spatial Analysis</h4></div></div>
-                <div class="schedule-item"><div class="schedule-time">14:00</div><div class="schedule-details"><h4 data-lang="ka">პოსტერული სესია</h4><h4 data-lang="en">Poster Session</h4></div></div>
-                <div class="schedule-item"><div class="schedule-time">16:00</div><div class="schedule-details"><h4 data-lang="ka">დახურვის ცერემონია</h4><h4 data-lang="en">Closing Ceremony</h4></div></div>
+                <div class="schedule-item"><div class="schedule-time">09:00</div><div class="schedule-details"><h4 data-lang="ka">სამეცნიერო სესია: ისტორიული კარტოგრაფია</h4><h4 data-lang="en">Scientific Session: Historical Cartography</h4></div></div>
+                <div class="schedule-item"><div class="schedule-time">11:00</div><div class="schedule-details"><h4 data-lang="ka">საერთაშორისო სპიკერი: ICA-ს ინიციატივები</h4><h4 data-lang="en">International Speaker: ICA Initiatives</h4><div class="schedule-speaker">👤 Dr. Sarah Mitchell, ICA</div></div></div>
+                <div class="schedule-item"><div class="schedule-time">14:00</div><div class="schedule-details"><h4 data-lang="ka">დახურვის ცერემონია და ჯილდოების გადაცემა</h4><h4 data-lang="en">Closing Ceremony and Awards</h4></div></div>
+                <div class="schedule-item"><div class="schedule-time">15:30</div><div class="schedule-details"><h4 data-lang="ka">ექსკურსია (სურვილისამებრ)</h4><h4 data-lang="en">Guided Tour (Optional)</h4></div></div>
             </div>
         </div>
     </section>
 
-    <section class="venue" id="venue">
+    <!-- Tour -->
+    <section class="section" id="tour">
         <div class="section-container">
             <div class="section-header">
-                <span class="section-label" data-lang="ka">ადგილმდებარეობა</span>
-                <span class="section-label" data-lang="en">Location</span>
-                <h2 class="section-title" data-lang="ka">კონფერენციის ჩატარების ადგილი</h2>
-                <h2 class="section-title" data-lang="en">Conference Venue</h2>
+                <span class="section-label" data-lang="ka">ექსკურსია</span><span class="section-label" data-lang="en">Guided Tour</span>
+                <h2 class="section-title" data-lang="ka">კარტოგრაფიული ტური</h2><h2 class="section-title" data-lang="en">Cartographic Tour</h2>
+            </div>
+            <div class="tour-content">
+                <div class="tour-image">🗺️</div>
+                <div class="tour-info">
+                    <h3 data-lang="ka">თბილისის ისტორიული კარტოგრაფიული ტური</h3><h3 data-lang="en">Tbilisi Historical Cartographic Tour</h3>
+                    <div class="tour-details">
+                        <div class="tour-detail"><div class="tour-detail-icon">📅</div><div class="tour-detail-text"><h4 data-lang="ka">თარიღი</h4><h4 data-lang="en">Date</h4><p data-lang="ka">17 ოქტომბერი, 15:30</p><p data-lang="en">October 17, 15:30</p></div></div>
+                        <div class="tour-detail"><div class="tour-detail-icon">⏱️</div><div class="tour-detail-text"><h4 data-lang="ka">ხანგრძლივობა</h4><h4 data-lang="en">Duration</h4><p data-lang="ka">დაახლოებით 3 საათი</p><p data-lang="en">Approximately 3 hours</p></div></div>
+                        <div class="tour-detail"><div class="tour-detail-icon">📍</div><div class="tour-detail-text"><h4 data-lang="ka">მარშრუტი</h4><h4 data-lang="en">Route</h4><p data-lang="ka">ეროვნული არქივი → ძველი თბილისი → ნარიყალა</p><p data-lang="en">National Archive → Old Tbilisi → Narikala</p></div></div>
+                        <div class="tour-detail"><div class="tour-detail-icon">💰</div><div class="tour-detail-text"><h4 data-lang="ka">ღირებულება</h4><h4 data-lang="en">Price</h4><p data-lang="ka">უფასო მონაწილეებისთვის</p><p data-lang="en">Free for participants</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exhibition -->
+    <section class="section section-alt" id="exhibition">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-lang="ka">გამოფენა</span><span class="section-label" data-lang="en">Exhibition</span>
+                <h2 class="section-title" data-lang="ka">რუკების გამოფენა</h2><h2 class="section-title" data-lang="en">Map Exhibition</h2>
+            </div>
+            <div class="exhibition-grid">
+                <div class="exhibition-card"><div class="exhibition-image">🏛️</div><div class="exhibition-info"><h3 data-lang="ka">ისტორიული რუკები</h3><h3 data-lang="en">Historical Maps</h3><p data-lang="ka">უნიკალური კოლექცია საქართველოს XVIII-XX საუკუნის რუკებისა</p><p data-lang="en">Unique collection of Georgian maps from 18th-20th centuries</p></div></div>
+                <div class="exhibition-card"><div class="exhibition-image">🛰️</div><div class="exhibition-info"><h3 data-lang="ka">თანამედროვე კარტოგრაფია</h3><h3 data-lang="en">Modern Cartography</h3><p data-lang="ka">თანამედროვე GIS ტექნოლოგიებით შექმნილი რუკები და 3D ვიზუალიზაციები</p><p data-lang="en">Maps created with modern GIS technologies and 3D visualizations</p></div></div>
+                <div class="exhibition-card"><div class="exhibition-image">🎨</div><div class="exhibition-info"><h3 data-lang="ka">სტუდენტური ნამუშევრები</h3><h3 data-lang="en">Student Works</h3><p data-lang="ka">საქართველოს უნივერსიტეტების სტუდენტების საუკეთესო კარტოგრაფიული პროექტები</p><p data-lang="en">Best cartographic projects from Georgian university students</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submission -->
+    <section class="section" id="submission">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-lang="ka">ნაშრომების გაგზავნა</span><span class="section-label" data-lang="en">Submission</span>
+                <h2 class="section-title" data-lang="ka">აბსტრაქტების მიღება</h2><h2 class="section-title" data-lang="en">Abstract Submission</h2>
+            </div>
+            <div class="submission-content">
+                <div class="submission-info">
+                    <h3 data-lang="ka">მოთხოვნები</h3><h3 data-lang="en">Requirements</h3>
+                    <ul class="submission-list">
+                        <li data-lang="ka">აბსტრაქტის მოცულობა: 250-300 სიტყვა</li><li data-lang="en">Abstract length: 250-300 words</li>
+                        <li data-lang="ka">ენა: ქართული ან ინგლისური</li><li data-lang="en">Language: Georgian or English</li>
+                        <li data-lang="ka">ფორმატი: Word ან PDF</li><li data-lang="en">Format: Word or PDF</li>
+                        <li data-lang="ka">საკვანძო სიტყვები: 3-5</li><li data-lang="en">Keywords: 3-5</li>
+                    </ul>
+                    <a href="mailto:conference@gca.qgis.ge" class="btn btn-primary" data-lang="ka">📧 გაგზავნა</a><a href="mailto:conference@gca.qgis.ge" class="btn btn-primary" data-lang="en">📧 Submit</a>
+                </div>
+                <div class="submission-timeline">
+                    <h3 data-lang="ka">მნიშვნელოვანი თარიღები</h3><h3 data-lang="en">Important Dates</h3>
+                    <div class="timeline-item"><div class="timeline-date" data-lang="ka">1 მაისი</div><div class="timeline-date" data-lang="en">May 1</div><div class="timeline-content"><h4 data-lang="ka">აბსტრაქტების მიღების დაწყება</h4><h4 data-lang="en">Abstract submission opens</h4></div></div>
+                    <div class="timeline-item"><div class="timeline-date" data-lang="ka">15 ივლისი</div><div class="timeline-date" data-lang="en">July 15</div><div class="timeline-content"><h4 data-lang="ka">აბსტრაქტების მიღების დასრულება</h4><h4 data-lang="en">Abstract submission deadline</h4></div></div>
+                    <div class="timeline-item"><div class="timeline-date" data-lang="ka">15 აგვისტო</div><div class="timeline-date" data-lang="en">Aug 15</div><div class="timeline-content"><h4 data-lang="ka">შედეგების გამოცხადება</h4><h4 data-lang="en">Notification of acceptance</h4></div></div>
+                    <div class="timeline-item"><div class="timeline-date" data-lang="ka">15 სექტ.</div><div class="timeline-date" data-lang="en">Sept 15</div><div class="timeline-content"><h4 data-lang="ka">სრული ნაშრომის წარდგენა</h4><h4 data-lang="en">Full paper submission</h4></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration -->
+    <section class="section section-blue" id="registration">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" style="color: var(--gold-light);" data-lang="ka">რეგისტრაცია</span><span class="section-label" style="color: var(--gold-light);" data-lang="en">Registration</span>
+                <h2 class="section-title" data-lang="ka">დარეგისტრირდით კონფერენციაზე</h2><h2 class="section-title" data-lang="en">Register for the Conference</h2>
+            </div>
+            <div class="registration-content">
+                <div class="google-form-container">
+                    <h3 data-lang="ka">რეგისტრაციის ფორმა</h3><h3 data-lang="en">Registration Form</h3>
+                    <p data-lang="ka">რეგისტრაციისთვის შეავსეთ Google ფორმა</p><p data-lang="en">Please fill out the Google Form to register</p>
+                    <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" target="_blank" class="form-link-btn" data-lang="ka">📝 რეგისტრაციის ფორმა →</a><a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" target="_blank" class="form-link-btn" data-lang="en">📝 Registration Form →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceedings -->
+    <section class="section section-alt" id="proceedings">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-lang="ka">გამოქვეყნება</span><span class="section-label" data-lang="en">Proceedings</span>
+                <h2 class="section-title" data-lang="ka">ნაშრომების გამოქვეყნების წესები</h2><h2 class="section-title" data-lang="en">Publication Guidelines</h2>
+            </div>
+            <div class="proceedings-content">
+                <h3 data-lang="ka">გამოქვეყნების შესაძლებლობები</h3><h3 data-lang="en">Publication Opportunities</h3>
+                <p data-lang="ka">კონფერენციაზე წარმოდგენილი ნაშრომები გამოქვეყნდება კონფერენციის კრებულში და ხელმისაწვდომი იქნება ციფრულ ფორმატში.</p><p data-lang="en">Papers presented at the conference will be published in the conference proceedings and available in digital format.</p>
+                <h3 data-lang="ka">ფორმატირების მოთხოვნები</h3><h3 data-lang="en">Formatting Requirements</h3>
+                <ul>
+                    <li data-lang="ka">მოცულობა: 4-8 გვერდი (A4)</li><li data-lang="en">Length: 4-8 pages (A4)</li>
+                    <li data-lang="ka">ფონტი: Times New Roman, 12pt</li><li data-lang="en">Font: Times New Roman, 12pt</li>
+                    <li data-lang="ka">ინტერვალი: 1.5</li><li data-lang="en">Line spacing: 1.5</li>
+                    <li data-lang="ka">ციტირება: APA სტილი</li><li data-lang="en">Citation style: APA</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venue -->
+    <section class="section" id="venue">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-lang="ka">ადგილმდებარეობა</span><span class="section-label" data-lang="en">Venue</span>
+                <h2 class="section-title" data-lang="ka">კონფერენციის ჩატარების ადგილი</h2><h2 class="section-title" data-lang="en">Conference Venue</h2>
             </div>
             <div class="venue-content">
-                <div class="venue-map"><div id="map"></div></div>
+                <div class="venue-map" id="map"></div>
                 <div class="venue-info">
-                    <h3 data-lang="ka">თბილისის სახელმწიფო უნივერსიტეტი</h3>
-                    <h3 data-lang="en">Tbilisi State University</h3>
+                    <h3 data-lang="ka">თბილისის სახელმწიფო უნივერსიტეტი</h3><h3 data-lang="en">Tbilisi State University</h3>
                     <div class="venue-details">
-                        <div class="venue-detail"><div class="venue-detail-icon">📍</div><div class="venue-detail-text"><h4 data-lang="ka">მისამართი</h4><h4 data-lang="en">Address</h4><p>I. Chavchavadze Ave. 3, Tbilisi, Georgia 0128</p></div></div>
-                        <div class="venue-detail"><div class="venue-detail-icon">🚇</div><div class="venue-detail-text"><h4 data-lang="ka">ტრანსპორტი</h4><h4 data-lang="en">Transportation</h4><p data-lang="ka">მეტრო "უნივერსიტეტი" - 5 წუთის სავალზე</p><p data-lang="en">Metro "University" - 5 min walk</p></div></div>
+                        <div class="venue-detail"><div class="venue-detail-icon">📍</div><div class="venue-detail-text"><h4 data-lang="ka">მისამართი</h4><h4 data-lang="en">Address</h4><p>I. Chavchavadze Ave. 3, Tbilisi 0128</p></div></div>
+                        <div class="venue-detail"><div class="venue-detail-icon">🚇</div><div class="venue-detail-text"><h4 data-lang="ka">ტრანსპორტი</h4><h4 data-lang="en">Transportation</h4><p data-lang="ka">მეტრო "უნივერსიტეტი" - 5 წუთი</p><p data-lang="en">Metro "University" - 5 min walk</p></div></div>
                         <div class="venue-detail"><div class="venue-detail-icon">🅿️</div><div class="venue-detail-text"><h4 data-lang="ka">პარკინგი</h4><h4 data-lang="en">Parking</h4><p data-lang="ka">უფასო პარკინგი მონაწილეებისთვის</p><p data-lang="en">Free parking for participants</p></div></div>
                     </div>
                 </div>
@@ -485,48 +522,43 @@
         </div>
     </section>
 
-    <section class="registration" id="registration">
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
         <div class="section-container">
             <div class="section-header">
-                <span class="section-label" data-lang="ka">რეგისტრაცია</span>
-                <span class="section-label" data-lang="en">Registration</span>
-                <h2 class="section-title" data-lang="ka">დარეგისტრირდით კონფერენციაზე</h2>
-                <h2 class="section-title" data-lang="en">Register for the Conference</h2>
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title" data-lang="ka">ხშირად დასმული კითხვები</h2><h2 class="section-title" data-lang="en">Frequently Asked Questions</h2>
             </div>
-            <div class="registration-content">
-                <div class="google-form-container">
-                    <h3 data-lang="ka">რეგისტრაციის ფორმა</h3>
-                    <h3 data-lang="en">Registration Form</h3>
-                    <p data-lang="ka">რეგისტრაციისთვის შეავსეთ Google ფორმა</p>
-                    <p data-lang="en">Please fill out the Google Form to register</p>
-                    <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" target="_blank" class="form-link-btn" data-lang="ka">📝 რეგისტრაციის ფორმა →</a>
-                    <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" target="_blank" class="form-link-btn" data-lang="en">📝 Registration Form →</a>
-                </div>
+            <div class="faq-container">
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span data-lang="ka">როგორ დავრეგისტრირდე?</span><span data-lang="en">How do I register?</span></div><div class="faq-answer"><p data-lang="ka">შეავსეთ Google ფორმა ვებგვერდზე. რეგისტრაცია უფასოა.</p><p data-lang="en">Fill out the Google Form on our website. Registration is free.</p></div></div>
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span data-lang="ka">რა ენაზე წარმოებს კონფერენცია?</span><span data-lang="en">What language will be used?</span></div><div class="faq-answer"><p data-lang="ka">კონფერენცია წარმოებს ქართულ და ინგლისურ ენებზე.</p><p data-lang="en">The conference will be in Georgian and English.</p></div></div>
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span data-lang="ka">არის თუ არა საფასური?</span><span data-lang="en">Is there a fee?</span></div><div class="faq-answer"><p data-lang="ka">კონფერენციაზე დასწრება უფასოა. რეგისტრაცია აუცილებელია.</p><p data-lang="en">Attendance is free. Registration is required.</p></div></div>
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span data-lang="ka">შემიძლია ნაშრომის წარდგენა?</span><span data-lang="en">Can I submit a paper?</span></div><div class="faq-answer"><p data-lang="ka">დიახ, აბსტრაქტების მიღება დაიწყება 1 მაისიდან.</p><p data-lang="en">Yes, abstract submission opens on May 1st.</p></div></div>
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span data-lang="ka">უზრუნველყოფილია კვება?</span><span data-lang="en">Will food be provided?</span></div><div class="faq-answer"><p data-lang="ka">დიახ, ყავის შესვენებები და ლანჩი უზრუნველყოფილია.</p><p data-lang="en">Yes, coffee breaks and lunch will be provided.</p></div></div>
             </div>
         </div>
     </section>
 
-    <section class="contact" id="contact">
+    <!-- Contact -->
+    <section class="section" id="contact">
         <div class="section-container">
             <div class="section-header">
-                <span class="section-label" data-lang="ka">კონტაქტი</span>
-                <span class="section-label" data-lang="en">Contact</span>
-                <h2 class="section-title" data-lang="ka">დაგვიკავშირდით</h2>
-                <h2 class="section-title" data-lang="en">Get in Touch</h2>
+                <span class="section-label" data-lang="ka">კონტაქტი</span><span class="section-label" data-lang="en">Contact</span>
+                <h2 class="section-title" data-lang="ka">დაგვიკავშირდით</h2><h2 class="section-title" data-lang="en">Get in Touch</h2>
             </div>
             <div class="contact-center">
                 <div class="contact-info-centered">
                     <h3>Georgian Cartographers Association</h3>
                     <p class="org-name-ka">საქართველოს კარტოგრაფთა ასოციაცია</p>
                     <div class="contact-details-centered">
-                        <div class="contact-detail"><div class="contact-detail-icon">📍</div><div>I. Chavchavadze Ave. 3, Tbilisi, Georgia 0128</div></div>
-                        <div class="contact-detail"><div class="contact-detail-icon">📧</div><div><a href="mailto:geocartographersassoc@gmail.com">geocartographersassoc@gmail.com</a></div></div>
+                        <div class="contact-detail"><div class="contact-detail-icon">📍</div><div>I. Chavchavadze Ave. 3, Tbilisi 0128</div></div>
+                        <div class="contact-detail"><div class="contact-detail-icon">📧</div><div><a href="mailto:conference@gca.qgis.ge">conference@gca.qgis.ge</a></div></div>
                         <div class="contact-detail"><div class="contact-detail-icon">🌐</div><div><a href="https://gca.qgis.ge" target="_blank">gca.qgis.ge</a></div></div>
                     </div>
                     <div class="social-links-centered">
-                        <a href="https://www.facebook.com/profile.php?id=61556291459201" target="_blank" class="social-link" title="Facebook">f</a>
-                        <a href="https://www.instagram.com/gca_ska" target="_blank" class="social-link" title="Instagram">📷</a>
-                        <a href="https://www.youtube.com/@GeorgianCartographersAssoc" target="_blank" class="social-link" title="YouTube">▶</a>
+                        <a href="https://www.facebook.com/profile.php?id=61556291459201" target="_blank" class="social-link">f</a>
+                        <a href="https://www.instagram.com/gca_ska" target="_blank" class="social-link">📷</a>
+                        <a href="https://www.youtube.com/@GeorgianCartographersAssoc" target="_blank" class="social-link">▶</a>
                     </div>
                 </div>
             </div>
@@ -537,52 +569,21 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <h3>Georgian Cartographers Association</h3>
-                <p data-lang="ka">საქართველოს კარტოგრაფთა ასოციაცია აერთიანებს პროფესიონალებს კარტოგრაფიის, GIS-ისა და გეოინფორმატიკის სფეროდან.</p>
-                <p data-lang="en">The Georgian Cartographers Association brings together professionals from cartography, GIS and geoinformatics.</p>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/profile.php?id=61556291459201" target="_blank">f</a>
-                    <a href="https://www.instagram.com/gca_ska" target="_blank">📷</a>
-                    <a href="https://www.youtube.com/@GeorgianCartographersAssoc" target="_blank">▶</a>
-                </div>
+                <p data-lang="ka">საქართველოს კარტოგრაფთა ასოციაცია აერთიანებს პროფესიონალებს კარტოგრაფიის, GIS-ისა და გეოინფორმატიკის სფეროდან.</p><p data-lang="en">The GCA brings together professionals from cartography, GIS and geoinformatics.</p>
+                <div class="footer-social"><a href="https://www.facebook.com/profile.php?id=61556291459201" target="_blank">f</a><a href="https://www.instagram.com/gca_ska" target="_blank">📷</a><a href="https://www.youtube.com/@GeorgianCartographersAssoc" target="_blank">▶</a></div>
             </div>
-            <div class="footer-links">
-                <h4 data-lang="ka">ნავიგაცია</h4><h4 data-lang="en">Navigation</h4>
-                <ul>
-                    <li><a href="#about" data-lang="ka">შესახებ</a><a href="#about" data-lang="en">About</a></li>
-                    <li><a href="#speakers" data-lang="ka">მომხსენებლები</a><a href="#speakers" data-lang="en">Speakers</a></li>
-                    <li><a href="#schedule" data-lang="ka">პროგრამა</a><a href="#schedule" data-lang="en">Schedule</a></li>
-                    <li><a href="#venue" data-lang="ka">ადგილმდებარეობა</a><a href="#venue" data-lang="en">Venue</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4 data-lang="ka">რესურსები</h4><h4 data-lang="en">Resources</h4>
-                <ul>
-                    <li><a href="#registration" data-lang="ka">რეგისტრაცია</a><a href="#registration" data-lang="en">Registration</a></li>
-                    <li><a href="mailto:geocartographersassoc@gmail.com" data-lang="ka">აბსტრაქტის გაგზავნა</a><a href="mailto:geocartographersassoc@gmail.com" data-lang="en">Submit Abstract</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4 data-lang="ka">კონტაქტი</h4><h4 data-lang="en">Contact</h4>
-                <ul>
-                    <li><a href="mailto:geocartographersassoc@gmail.com">geocartographersassoc@gmail.com</a></li>
-                    <li>I. Chavchavadze Ave. 3</li>
-                    <li>Tbilisi, Georgia 0128</li>
-                </ul>
-            </div>
+            <div class="footer-links"><h4 data-lang="ka">ნავიგაცია</h4><h4 data-lang="en">Navigation</h4><ul><li><a href="#about" data-lang="ka">შესახებ</a><a href="#about" data-lang="en">About</a></li><li><a href="#organizers" data-lang="ka">ორგანიზატორები</a><a href="#organizers" data-lang="en">Organizers</a></li><li><a href="#programme" data-lang="ka">პროგრამა</a><a href="#programme" data-lang="en">Programme</a></li><li><a href="#venue" data-lang="ka">ადგილი</a><a href="#venue" data-lang="en">Venue</a></li></ul></div>
+            <div class="footer-links"><h4 data-lang="ka">რესურსები</h4><h4 data-lang="en">Resources</h4><ul><li><a href="#registration" data-lang="ka">რეგისტრაცია</a><a href="#registration" data-lang="en">Registration</a></li><li><a href="#submission" data-lang="ka">გაგზავნა</a><a href="#submission" data-lang="en">Submission</a></li><li><a href="#proceedings" data-lang="ka">გამოქვეყნება</a><a href="#proceedings" data-lang="en">Proceedings</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+            <div class="footer-links"><h4 data-lang="ka">კონტაქტი</h4><h4 data-lang="en">Contact</h4><ul><li><a href="mailto:conference@gca.qgis.ge">conference@gca.qgis.ge</a></li><li>I. Chavchavadze Ave. 3</li><li>Tbilisi, Georgia 0128</li></ul></div>
         </div>
-        <div class="footer-bottom">
-            <p data-lang="ka">© 2026 საქართველოს კარტოგრაფთა ასოციაცია. ყველა უფლება დაცულია.</p>
-            <p data-lang="en">© 2026 Georgian Cartographers Association. All rights reserved.</p>
-        </div>
+        <div class="footer-bottom"><p data-lang="ka">© 2026 საქართველოს კარტოგრაფთა ასოციაცია. ყველა უფლება დაცულია.</p><p data-lang="en">© 2026 Georgian Cartographers Association. All rights reserved.</p></div>
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         function setLang(lang) {
             document.body.className = lang === 'en' ? 'en' : '';
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.textContent.toLowerCase().includes(lang === 'en' ? 'eng' : 'ქარ'));
-            });
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.textContent.toLowerCase().includes(lang === 'en' ? 'eng' : 'ქარ')));
             localStorage.setItem('gca-lang', lang);
         }
         const savedLang = localStorage.getItem('gca-lang');
@@ -593,101 +594,35 @@
             document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 500);
         });
 
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
         function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
 
         function showDay(day) {
             document.querySelectorAll('.schedule-content').forEach(c => c.classList.remove('active'));
             document.querySelectorAll('.schedule-tab').forEach(t => t.classList.remove('active'));
             document.getElementById('day' + day).classList.add('active');
-            document.querySelectorAll('.schedule-tab').forEach(t => {
-                if (t.textContent.includes(day)) t.classList.add('active');
-            });
+            document.querySelectorAll('.schedule-tab').forEach((t, i) => { if (Math.floor(i / 2) === day - 1) t.classList.add('active'); });
         }
 
-        const slider = document.getElementById('speakersSlider');
-        const cardWidth = 295;
-        let currentPosition = 0;
-        let autoScrollInterval;
-        let isAutoScrollEnabled = true;
-
-        const dotsContainer = document.getElementById('sliderDots');
-        for (let i = 0; i < 5; i++) {
-            const dot = document.createElement('div');
-            dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
-            dot.onclick = () => goToPage(i);
-            dotsContainer.appendChild(dot);
+        function toggleFaq(el) {
+            const item = el.parentElement;
+            const wasActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+            if (!wasActive) item.classList.add('active');
         }
-
-        function updateDots() {
-            const page = Math.floor(currentPosition / (cardWidth * 4));
-            document.querySelectorAll('.slider-dot').forEach((dot, i) => {
-                dot.classList.toggle('active', i === Math.min(page, 4));
-            });
-        }
-
-        function slideLeft() {
-            currentPosition = Math.max(0, currentPosition - cardWidth * 4);
-            slider.scrollTo({ left: currentPosition, behavior: 'smooth' });
-            updateDots();
-            resetAutoScroll();
-        }
-
-        function slideRight() {
-            const maxScroll = slider.scrollWidth - slider.clientWidth;
-            currentPosition = Math.min(maxScroll, currentPosition + cardWidth * 4);
-            slider.scrollTo({ left: currentPosition, behavior: 'smooth' });
-            updateDots();
-            resetAutoScroll();
-        }
-
-        function goToPage(page) {
-            currentPosition = page * cardWidth * 4;
-            slider.scrollTo({ left: currentPosition, behavior: 'smooth' });
-            updateDots();
-            resetAutoScroll();
-        }
-
-        function autoScroll() {
-            if (!isAutoScrollEnabled) return;
-            const maxScroll = slider.scrollWidth - slider.clientWidth;
-            currentPosition = currentPosition >= maxScroll ? 0 : currentPosition + cardWidth;
-            slider.scrollTo({ left: currentPosition, behavior: 'smooth' });
-            updateDots();
-        }
-
-        function startAutoScroll() { if (isAutoScrollEnabled) autoScrollInterval = setInterval(autoScroll, 3000); }
-        function resetAutoScroll() { clearInterval(autoScrollInterval); startAutoScroll(); }
-        function toggleAutoScroll() {
-            isAutoScrollEnabled = document.getElementById('autoScrollToggle').checked;
-            isAutoScrollEnabled ? startAutoScroll() : clearInterval(autoScrollInterval);
-        }
-
-        slider.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
-        slider.addEventListener('mouseleave', startAutoScroll);
-        startAutoScroll();
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    document.getElementById('navMenu').classList.remove('active');
-                }
+                if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); document.getElementById('navMenu').classList.remove('active'); }
             });
         });
 
         document.addEventListener('DOMContentLoaded', function() {
-            const map = L.map('map').setView([41.709950, 44.778423], 17);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            }).addTo(map);
-            L.marker([41.709950, 44.778423]).addTo(map)
-                .bindPopup('<strong>GCA Conference 2026</strong><br>I. Chavchavadze Ave. 3<br>Tbilisi, Georgia').openPopup();
+            const map = L.map('map').setView([41.7151, 44.7469], 15);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
+            L.marker([41.7151, 44.7469]).addTo(map).bindPopup('<b>თბილისის სახელმწიფო უნივერსიტეტი</b>').openPopup();
         });
     </script>
 </body>

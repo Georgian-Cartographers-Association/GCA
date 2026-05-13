@@ -1,133 +1,71 @@
-# 🗺️ GCA Conference 2026
+# კარტოგრაფია და თანამედროვეობა
 
-**საქართველოს კარტოგრაფთა ასოციაციის კონფერენციის ვებგვერდი**
+**პირველი საერთაშორისო კონფერენცია**
+29 – 31 ოქტომბერი, 2026 · თბილისი, საქართველო
 
-Georgian Cartographers Association Conference Website
-
-🌐 **Live Site:** [gca.qgis.ge](https://gca.qgis.ge)
-
----
-
-## ✨ Features / მახასიათებლები
-
-- 🌍 **Bilingual** - Full Georgian/English language support
-- 📱 **Responsive** - Desktop, tablet, and mobile optimized
-- 🎠 **Speaker Slider** - 20 speakers with auto-scroll carousel
-- 🗺️ **OpenStreetMap** - Interactive venue map
-- 📝 **Google Forms** - Integrated registration
-- ⚡ **Single File** - Just one HTML file, easy to deploy
-- 🚀 **GitHub Pages Ready** - Deploy in minutes
+🌐 **ვებგვერდი:** [gca.qgis.ge](https://gca.qgis.ge)
 
 ---
 
-## 🚀 Deployment / განთავსება
+## კონფერენციის შესახებ
 
-### GitHub Pages
+ივანე ჯავახიშვილის სახელობის თბილისის სახელმწიფო უნივერსიტეტი (თსუ) და საქართველოს კარტოგრაფთა ასოციაცია (სკა) იწყებს საერთაშორისო სამეცნიერო კონფერენციების სერიის ჩატარებას სახელწოდებით „კარტოგრაფია და თანამედროვეობა", რომელიც გაიმართება 4 წელიწადში ერთხელ საქართველოში.
 
-1. Upload files to your repository
-2. Go to **Settings** → **Pages**
-3. Select **Source**: Deploy from branch
-4. Select **Branch**: `main` and folder `/ (root)`
-5. Click **Save**
+ღონისძიებამ მიიღო **საერთაშორისო კარტოგრაფიული ასოციაციის (ICA)** ოფიციალური აღიარება.
 
-### Custom Domain (gca.qgis.ge)
-
-1. In repository **Settings** → **Pages** → **Custom domain**
-2. Enter: `gca.qgis.ge`
-3. Add DNS records at your domain registrar:
-   - Type: `CNAME`
-   - Name: `gca`
-   - Value: `yourusername.github.io`
+პირველი კონფერენცია ეძღვნება პროფესორ **ალექსანდრე ასლანიკაშვილის** დაბადებიდან 110 წლის იუბილეს.
 
 ---
 
-## 📁 Files / ფაილები
+## ორგანიზატორები
 
-```
-gca-conference/
-├── index.html          # Main website
-├── README.md           # Documentation
-├── LICENSE             # All Rights Reserved
-└── CNAME               # Custom domain config
-```
+| | |
+|---|---|
+| **ივანე ჯავახიშვილის სახ. თბილისის სახელმწიფო უნივერსიტეტი** | [tsu.ge](https://www.tsu.ge/en) |
+| **საქართველოს კარტოგრაფთა ასოციაცია** | [gca.qgis.ge](https://gca.qgis.ge) |
 
----
-
-## 🎨 Customization / პერსონალიზაცია
-
-### Google Form Integration
-
-Replace `YOUR_FORM_ID` in index.html with your actual Google Form ID:
-
-```html
-<a href="https://docs.google.com/forms/d/e/YOUR_ACTUAL_FORM_ID/viewform" ...>
-```
-
-### Add Speaker Photos
-
-Replace placeholder divs with actual images:
-
-```html
-<div class="speaker-image">
-    <img src="photos/speaker1.jpg" alt="Speaker Name" style="width:100%;height:100%;object-fit:cover;">
-</div>
-```
-
-### Edit Colors
-
-Modify CSS variables in `<style>`:
-
-```css
-:root {
-    --gold: #d69e2e;      /* Primary accent */
-    --deep-blue: #1a365d; /* Secondary color */
-    /* ... */
-}
-```
+**აღიარებული და მხარდაჭერილია:** საერთაშორისო კარტოგრაფიული ასოციაცია (ICA) · [icaci.org](https://icaci.org)
 
 ---
 
-## 📋 Sections / სექციები
+## განრიგი
 
-1. **Hero** - Conference banner with date/location
-2. **About** - 4 feature cards
-3. **Speakers** - 20 speaker carousel with auto-scroll
-4. **Schedule** - 3-day program with tabs
-5. **Venue** - OpenStreetMap integration
-6. **Registration** - Google Form link
-7. **Contact** - Form + social links
-8. **Footer** - Navigation + contact info
+| თარიღი | დღე |
+|---|---|
+| 29 ოქტომბერი (ხუთშაბათი) | რეგისტრაცია · გახსნის ცერემონია · საკონფერენციო სესიები · გამოფენა |
+| 30 ოქტომბერი (პარასკევი) | საკონფერენციო სესიები · გამოფენა · ვახშამი |
+| 31 ოქტომბერი (შაბათი) | ექსკურსია (ნებაყოფლობითი) |
 
 ---
 
-## 🔧 Tech Stack
+## ნაშრომების წარდგენა
 
-- **Pure HTML/CSS/JS** - No build tools required
-- **Leaflet.js** - OpenStreetMap integration
-- **Google Fonts** - Playfair Display + Source Sans 3
+თსუ გეგმავს კრებულის გამოცემას (ბეჭდური ფორმატი), რომელიც განთავსდება Google Scholar-ის მონაცემთა ბაზაში.
+
+| | ვადა |
+|---|---|
+| აბსტრაქტების წარდგენა | **1 ივლისი** |
+| სტატიების წარდგენა | **1 სექტემბერი** |
 
 ---
 
-## 📞 Contact / კონტაქტი
+## ჩატარების ადგილი
 
-**Georgian Cartographers Association**
-- 📧 geocartographersassoc@gmail.com
-- 📍 I. Chavchavadze Ave. 3, Tbilisi, Georgia 0128
+**ივანე ჯავახიშვილის სახ. თბილისის სახელმწიფო უნივერსიტეტი**
+ი. ჭავჭავაძის გამზ. 3, თბილისი 0128
+
+📍 [Google Maps](https://www.google.com/maps/place/Ivane+Javakhishvili+Tbilisi+State+University/@41.7098684,44.7784941,141m/data=!3m1!1e3!4m6!3m5!1s0x40440cd30294b88b:0x9cfe7a9b37f34a36!8m2!3d41.7099824!4d44.7779992!16zL20vMDI3ZmRf)
+
+---
+
+## კონტაქტი
+
+**საქართველოს კარტოგრაფთა ასოციაცია**
+
+- 📧 [geocartographersassoc@gmail.com](mailto:geocartographersassoc@gmail.com)
 - 🌐 [gca.qgis.ge](https://gca.qgis.ge)
-
-**Social Media:**
-- [Facebook](https://www.facebook.com/profile.php?id=61556291459201)
-- [Instagram](https://www.instagram.com/gca_ska)
-- [YouTube](https://www.youtube.com/@GeorgianCartographersAssoc)
+- [Facebook](https://www.facebook.com/profile.php?id=61556291459201) · [Instagram](https://www.instagram.com/gca_ska) · [YouTube](https://www.youtube.com/@GeorgianCartographersAssoc)
 
 ---
 
-## 📄 License / ლიცენზია
-
-**All Rights Reserved** - See [LICENSE](LICENSE) file.
-
-This website and its source code are the exclusive property of the Georgian Cartographers Association. Unauthorized copying, modification, or distribution is prohibited.
-
----
-
-© 2026 Georgian Cartographers Association / საქართველოს კარტოგრაფთა ასოციაცია
+© 2026 საქართველოს კარტოგრაფთა ასოციაცია / Georgian Cartographers Association

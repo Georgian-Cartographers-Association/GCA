@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function openBioModal() {
     const modal = document.getElementById('bioModal');
+    modal.style.display = 'flex';
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
     // sync modal lang with site lang
@@ -96,7 +97,9 @@ function openBioModal() {
 }
 
 function closeBioModal() {
-    document.getElementById('bioModal').classList.remove('active');
+    const modal = document.getElementById('bioModal');
+    modal.style.display = 'none';
+    modal.classList.remove('active');
     document.body.style.overflow = '';
 }
 

@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=2">
 </head>
 <body>
 
@@ -825,7 +825,7 @@
     </section>
 
     <!-- Biography Modal: Alexander Aslanikashvili -->
-    <div class="bio-modal" id="bioModal" role="dialog" aria-modal="true" aria-labelledby="bioModalTitle">
+    <div class="bio-modal" id="bioModal" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="bioModalTitle">
         <div class="bio-modal-overlay" onclick="closeBioModal()"></div>
         <div class="bio-modal-inner">
             <button class="bio-modal-close" onclick="closeBioModal()" aria-label="Close">✕</button>
@@ -966,6 +966,6 @@
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v=2"></script>
 </body>
 </html>

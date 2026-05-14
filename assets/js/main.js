@@ -83,3 +83,32 @@ document.addEventListener('DOMContentLoaded', () => {
         .bindPopup('<b>ივ. ჯავახიშვილის სახ. თბილისის სახელმწიფო უნივერსიტეტი</b><br>ი. ჭავჭავაძის გამზ. 3')
         .openPopup();
 });
+
+/* ===== Biography Modal ===== */
+
+function openBioModal() {
+    const modal = document.getElementById('bioModal');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    // sync modal lang with site lang
+    const siteLang = document.body.classList.contains('en') ? 'en' : 'ka';
+    setBioLang(siteLang);
+}
+
+function closeBioModal() {
+    document.getElementById('bioModal').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function setBioLang(lang) {
+    const isEn = lang === 'en';
+    document.querySelectorAll('#bioModal .bio-ka').forEach(el => el.classList.toggle('bio-hidden', isEn));
+    document.querySelectorAll('#bioModal .bio-en').forEach(el => el.classList.toggle('bio-hidden', !isEn));
+    document.getElementById('bioLangKa').classList.toggle('active', !isEn);
+    document.getElementById('bioLangEn').classList.toggle('active',  isEn);
+}
+
+// Close on ESC key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeBioModal();
+});

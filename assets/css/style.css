@@ -11,7 +11,7 @@
     --gradient-hero: linear-gradient(135deg, var(--midnight) 0%, var(--deep-blue) 50%, var(--ocean) 100%);
     --gradient-gold: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
     --font-display: 'Playfair Display', Georgia, serif;
-    --font-body: 'Noto Sans Georgian', 'Source Sans 3', sans-serif;
+    --font-body: 'Noto Sans Georgian', sans-serif;
     --section-padding: clamp(4rem, 10vw, 8rem);
 }
 

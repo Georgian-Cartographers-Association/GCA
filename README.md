@@ -1,9 +1,22 @@
+> [!WARNING]
+> **ეს რეპოზიტორია მხოლოდ შაბლონია და არანაირ ოფიციალურ ფუნქციას არ ასრულებს.**
+> კონფერენციის ოფიციალური ვებგვერდი გადავიდა:
+> ## 🌐 [cam2026.tsu.ge](https://cam2026.tsu.ge/)
+>
+> ---
+>
+> **This repository is a template only and serves no official purpose.**
+> The official conference website has moved to:
+> ## 🌐 [cam2026.tsu.ge](https://cam2026.tsu.ge/)
+
+---
+
 # კარტოგრაფია და თანამედროვეობა
 
 **პირველი საერთაშორისო კონფერენცია**
 29 – 31 ოქტომბერი, 2026 · თბილისი, საქართველო
 
-🌐 **ვებგვერდი:** [gca.qgis.ge](https://gca.qgis.ge)
+🌐 **ოფიციალური ვებგვერდი:** [cam2026.tsu.ge](https://cam2026.tsu.ge/)
 
 ---
 
@@ -22,7 +35,7 @@
 | | |
 |---|---|
 | **ივანე ჯავახიშვილის სახ. თბილისის სახელმწიფო უნივერსიტეტი** | [tsu.ge](https://www.tsu.ge/en) |
-| **საქართველოს კარტოგრაფთა ასოციაცია** | [gca.qgis.ge](https://gca.qgis.ge) |
+| **საქართველოს კარტოგრაფთა ასოციაცია** | [cam2026.tsu.ge](https://cam2026.tsu.ge/) |
 
 **აღიარებული და მხარდაჭერილია:** საერთაშორისო კარტოგრაფიული ასოციაცია (ICA) · [icaci.org](https://icaci.org)
 
@@ -63,7 +76,7 @@
 **საქართველოს კარტოგრაფთა ასოციაცია**
 
 - 📧 [geocartographersassoc@gmail.com](mailto:geocartographersassoc@gmail.com)
-- 🌐 [gca.qgis.ge](https://gca.qgis.ge)
+- 🌐 [cam2026.tsu.ge](https://cam2026.tsu.ge/)
 - [Facebook](https://www.facebook.com/profile.php?id=61556291459201) · [Instagram](https://www.instagram.com/gca_ska) · [YouTube](https://www.youtube.com/@GeorgianCartographersAssoc)
 
 ---

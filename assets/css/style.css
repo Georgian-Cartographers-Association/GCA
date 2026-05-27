@@ -68,19 +68,30 @@ body {
 }
 
 body [data-lang="en"] {
-    display: none;
+    display: none !important;
 }
 
 body.en [data-lang="ka"] {
-    display: none;
+    display: none !important;
 }
 
 body.en [data-lang="en"] {
-    display: block;
+    display: block !important;
+}
+
+body.en span[data-lang="en"],
+body.en strong[data-lang="en"],
+body.en a[data-lang="en"] {
+    display: inline !important;
 }
 
 body.en .btn[data-lang="en"] {
-    display: inline-flex;
+    display: inline-flex !important;
+}
+
+body.en .nav-link[data-lang="en"],
+body.en .nav-cta[data-lang="en"] {
+    display: block !important;
 }
 
 /* ===== Navigation ===== */

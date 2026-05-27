@@ -290,8 +290,19 @@ body.en .btn[data-lang="en"] {
     opacity: 0;
 }
 
+.hero-title .sub-line {
+    display: block;
+    font-size: 0.48em;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.4em;
+    opacity: 0.85;
+}
+
 .hero-title span {
     display: inline-block;
+    font-size: 1.1em;
     background: var(--gradient-gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

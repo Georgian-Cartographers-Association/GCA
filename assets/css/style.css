@@ -1532,6 +1532,29 @@ body.en .nav-cta[data-lang="en"] {
 .faq-answer p {
     color: var(--ocean);
     line-height: 1.7;
+    margin-bottom: 0.5rem;
+}
+
+.faq-answer ul {
+    list-style: none;
+    margin: 0.5rem 0 1rem 0;
+    padding: 0;
+}
+
+.faq-answer ul li {
+    color: var(--ocean);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding: 0.2rem 0 0.2rem 1.4rem;
+    position: relative;
+}
+
+.faq-answer ul li::before {
+    content: '✓';
+    color: var(--gold);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
 }
 
 /* ===== Contact ===== */

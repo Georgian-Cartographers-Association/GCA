@@ -21,6 +21,12 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -495,17 +501,21 @@ body.en .nav-cta[data-lang="en"] {
     display: inline-block;
     color: var(--gold);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     margin-bottom: 1rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .section-title {
     font-family: var(--font-display);
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(1.6rem, 4vw, 3rem);
     color: var(--midnight);
     margin-bottom: 1rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .section-dark .section-title,
@@ -515,9 +525,11 @@ body.en .nav-cta[data-lang="en"] {
 
 .section-subtitle {
     color: var(--ocean);
-    font-size: 1.1rem;
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
     max-width: 600px;
     margin: 0 auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .section-dark .section-subtitle,
@@ -663,6 +675,7 @@ body.en .nav-cta[data-lang="en"] {
     max-width: 160px;
     height: 85px;
     object-fit: contain;
+    margin: 0 auto;
 }
 
 .org-logo-name {
@@ -1476,9 +1489,17 @@ body.en .nav-cta[data-lang="en"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     font-weight: 600;
     color: var(--midnight);
     transition: background 0.3s;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.faq-question > span {
+    flex: 1;
+    min-width: 0;
 }
 
 .faq-question:hover {
@@ -1551,12 +1572,17 @@ body.en .nav-cta[data-lang="en"] {
     justify-content: center;
     gap: 1rem;
     color: var(--midnight);
+    flex-wrap: wrap;
+    word-break: break-all;
+    overflow-wrap: anywhere;
 }
 
 .contact-detail a {
     color: var(--midnight);
     text-decoration: none;
     transition: color 0.3s;
+    word-break: break-all;
+    overflow-wrap: anywhere;
 }
 
 .contact-detail a:hover {
@@ -1748,6 +1774,11 @@ body.en .nav-cta[data-lang="en"] {
 
     .footer-content {
         grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .section-title {
+        font-size: clamp(1.6rem, 3.5vw, 2.5rem);
     }
 }
 
@@ -1881,6 +1912,34 @@ body.en .nav-cta[data-lang="en"] {
     .lang-switcher {
         order: 3;
         margin-top: 1rem;
+    }
+
+    .submission-deadlines {
+        flex-direction: column;
+    }
+
+    .deadline-item {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .hero-date {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .submission-block,
+    .topics-block {
+        padding: 1.5rem;
+    }
+
+    .contact-info-centered {
+        max-width: 100%;
+        padding: 0 0.5rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -2039,6 +2098,37 @@ body.en .nav-cta[data-lang="en"] {
     .committee-section {
         margin-top: 3rem;
         padding-top: 2.5rem;
+    }
+
+    .timeline-date {
+        min-width: 75px;
+        font-size: 0.82rem;
+    }
+
+    .section-label {
+        letter-spacing: 1px;
+        font-size: 0.75rem;
+    }
+
+    .org-separator-text {
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-subtitle {
+        font-size: 0.93rem;
+    }
+
+    .footer-links {
+        text-align: left;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -2281,4 +2371,21 @@ body.en .nav-cta[data-lang="en"] {
     .bio-roles li { text-align: left; }
     .bio-modal-content { padding: 0 1.25rem 2rem; }
     .bio-tl-item { grid-template-columns: 90px 1fr; }
+    .bio-modal { padding: 0.75rem; }
+    .bio-modal-inner { border-radius: 16px; }
+    .bio-name { font-size: 1.35rem; }
+}
+
+@media (max-width: 400px) {
+    .bio-tl-item { grid-template-columns: 75px 1fr; font-size: 0.85rem; }
+    .bio-modal-content { padding: 0 1rem 1.5rem; }
+    .bio-modal { padding: 0.5rem; }
+
+    .nav-logo-text { font-size: 1rem; }
+    .nav-logo-icon { width: 36px; height: 36px; font-size: 1rem; }
+
+    .hero-date-icon { width: 36px; height: 36px; font-size: 1rem; }
+    .hero-date-value { font-size: 0.95rem; }
+
+    .section { padding: var(--section-padding) 0.75rem; }
 }

@@ -299,6 +299,8 @@ body.en .nav-cta[data-lang="en"] {
     margin-bottom: 2.5rem;
     animation: fadeInUp 0.8s ease 0.2s forwards;
     opacity: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .hero-title .sub-line {
@@ -318,6 +320,7 @@ body.en .nav-cta[data-lang="en"] {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    max-width: 100%;
 }
 
 .hero-subtitle {
@@ -328,6 +331,8 @@ body.en .nav-cta[data-lang="en"] {
     font-weight: 300;
     animation: fadeInUp 0.8s ease 0.4s forwards;
     opacity: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .hero-date {
@@ -1756,14 +1761,33 @@ body.en .nav-cta[data-lang="en"] {
         padding: 6rem 1.25rem 3rem;
     }
 
+    .hero-title {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+
+    .hero-title span {
+        display: block;
+    }
+
+    .hero-title .sub-line {
+        font-size: 0.55em;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(0.95rem, 3.5vw, 1.2rem);
+        max-width: 100%;
+    }
+
     .hero-buttons {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
+        width: 100%;
     }
 
     .hero-buttons .btn {
         width: 100%;
         justify-content: center;
+        box-sizing: border-box;
     }
 
     .about-text-block {
@@ -1882,6 +1906,27 @@ body.en .nav-cta[data-lang="en"] {
         padding: 5rem 1rem 2.5rem;
     }
 
+    .hero-title {
+        font-size: clamp(1.6rem, 8vw, 2.2rem);
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        font-size: 0.9rem;
+        padding: 0.85rem 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
     .hero-date {
         gap: 1.25rem;
     }
@@ -1946,6 +1991,15 @@ body.en .nav-cta[data-lang="en"] {
     .google-form-container {
         padding: 1.25rem;
         border-radius: 16px;
+    }
+
+    .form-link-btn {
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.95rem;
+        padding: 0.9rem 1rem;
     }
 
     .proceedings-content {

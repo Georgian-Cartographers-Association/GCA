@@ -1250,6 +1250,66 @@ body.en .nav-cta[data-lang="en"] {
     font-size: 1rem;
 }
 
+/* Important dates timeline */
+.submission-dates {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 1.25rem;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.5rem;
+}
+
+.submission-date-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--mist);
+    position: relative;
+}
+
+.submission-date-item:last-child {
+    border-bottom: none;
+}
+
+.submission-date-item::before {
+    content: '';
+    position: absolute;
+    left: -1.85rem;
+    top: 1.1rem;
+    width: 10px;
+    height: 10px;
+    background: var(--gold);
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px var(--gold);
+}
+
+.submission-date-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.submission-date-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.submission-date-text strong {
+    color: var(--midnight);
+    font-size: 0.95rem;
+    display: block;
+}
+
+.submission-date-text span {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
 .topics-block {
     background: white;
     border-radius: 20px;

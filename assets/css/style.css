@@ -1397,6 +1397,37 @@ body.en .nav-cta[data-lang="en"] {
     margin-bottom: 1.5rem;
 }
 
+.registration-info {
+    background: var(--cream);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.registration-info p {
+    color: var(--midnight);
+    margin-bottom: 0.5rem;
+    font-size: 0.97rem;
+    line-height: 1.6;
+}
+
+.registration-info p:last-child {
+    margin-bottom: 0;
+}
+
+.registration-info a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px dashed var(--gold);
+}
+
+.registration-info a:hover {
+    color: var(--deep-blue);
+    border-color: var(--deep-blue);
+}
+
 .form-link-btn {
     display: inline-flex;
     align-items: center;

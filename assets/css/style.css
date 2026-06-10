@@ -327,6 +327,7 @@ body.en .nav-cta[data-lang="en"] {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     max-width: 100%;
+    padding-bottom: 0.1em;
 }
 
 .hero-subtitle {

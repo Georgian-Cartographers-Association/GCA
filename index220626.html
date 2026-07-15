@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAM 2026 | საქართველოს კარტოგრაფთა ასოციაციის კონფერენცია</title>
+    <meta name="description" content="საქართველოს კარტოგრაფთა ასოციაციის საერთაშორისო კონფერენცია 2026">
+    <link rel="canonical" href="https://cam2026.tsu.ge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=3">
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="nav-logo-icon">🗺️</div>
+                <span class="nav-logo-text">CAM 2026</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li>
+                    <a href="#about" class="nav-link" data-lang="ka">შესახებ</a>
+                    <a href="#about" class="nav-link" data-lang="en">About</a>
+                </li>
+                <li>
+                    <a href="#organizers" class="nav-link" data-lang="ka">ორგანიზატორები</a>
+                    <a href="#organizers" class="nav-link" data-lang="en">Organizers</a>
+                </li>
+                <li>
+                    <a href="#programme" class="nav-link" data-lang="ka">პროგრამა</a>
+                    <a href="#programme" class="nav-link" data-lang="en">Programme</a>
+                </li>
+                <li>
+                    <a href="#tour" class="nav-link" data-lang="ka">ექსკურსია</a>
+                    <a href="#tour" class="nav-link" data-lang="en">Tour</a>
+                </li>
+                <li>
+                    <a href="#submission" class="nav-link" data-lang="ka">გაგზავნა</a>
+                    <a href="#submission" class="nav-link" data-lang="en">Submission</a>
+                </li>
+                <li>
+                    <a href="#proceedings" class="nav-link" data-lang="ka">გამოქვეყნება</a>
+                    <a href="#proceedings" class="nav-link" data-lang="en">Proceedings</a>
+                </li>
+                <li>
+                    <a href="#venue" class="nav-link" data-lang="ka">ადგილი</a>
+                    <a href="#venue" class="nav-link" data-lang="en">Venue</a>
+                </li>
+                <li>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-link" data-lang="ka">კონტაქტი</a>
+                    <a href="#contact" class="nav-link" data-lang="en">Contact</a>
+                </li>
+                <li>
+                    <a href="#registration" class="nav-cta" data-lang="ka">რეგისტრაცია</a>
+                    <a href="#registration" class="nav-cta" data-lang="en">Register</a>
+                </li>
+            </ul>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang-target="ka">ქარ</button>
+                <button class="lang-btn" data-lang-target="en">ENG</button>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+            <div class="hero-badge" data-lang="ka">თბილისი, საქართველო</div>
+            <div class="hero-badge" data-lang="en">Tbilisi, Georgia</div>
+
+            <h1 class="hero-title" data-lang="ka">
+                <span class="sub-line">პირველი საერთაშორისო კონფერენცია</span>
+                <span>კარტოგრაფია და თანამედროვეობა</span>
+            </h1>
+            <h1 class="hero-title" data-lang="en">
+                <span class="sub-line">First International Conference</span>
+                <span>Cartography and Modernity</span>
+            </h1>
+
+            <p class="hero-subtitle" data-lang="ka">შემოგვიერთდით კარტოგრაფიის, გეოინფორმატიკისა და სივრცითი მონაცემების ანალიზის უახლესი ტენდენციების განსახილველად</p>
+            <p class="hero-subtitle" data-lang="en">Join us to explore the latest trends in cartography, geoinformatics, and spatial data analysis</p>
+
+            <div class="hero-date">
+                <div class="hero-date-item">
+                    <div class="hero-date-icon">📅</div>
+                    <div class="hero-date-text">
+                        <span class="hero-date-label" data-lang="ka">თარიღი</span>
+                        <span class="hero-date-label" data-lang="en">Date</span>
+                        <span class="hero-date-value" data-lang="ka">29 - 31 ოქტომბერი, 2026</span>
+                        <span class="hero-date-value" data-lang="en">October 29–31, 2026</span>
+                    </div>
+                </div>
+                <div class="hero-date-item">
+                    <div class="hero-date-icon">📍</div>
+                    <div class="hero-date-text">
+                        <span class="hero-date-label" data-lang="ka">ადგილმდებარეობა</span>
+                        <span class="hero-date-label" data-lang="en">Location</span>
+                        <span class="hero-date-value" data-lang="ka">თბილისი, საქართველო</span>
+                        <span class="hero-date-value" data-lang="en">Tbilisi, Georgia</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#registration" class="btn btn-primary" data-lang="ka">რეგისტრაცია →</a>
+                <a href="#registration" class="btn btn-primary" data-lang="en">Register Now →</a>
+                <a href="#about" class="btn btn-secondary" data-lang="ka">გაიგე მეტი</a>
+                <a href="#about" class="btn btn-secondary" data-lang="en">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <!-- About -->
+    <section class="section" id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-lang="ka">რა გელოდებათ</span>
+                <span class="section-label" data-lang="en">What to Expect</span>
+                <h2 class="section-title" data-lang="ka">კონფერენციის შესახებ</h2>
+                <h2 class="section-title" data-lang="en">About the Conference</h2>
+                <p class="section-subtitle" data-lang="ka">სამდღიანი ღონისძიება კარტოგრაფიისა და GIS პროფესიონალებისთვის</p>
+                <p class="section-subtitle" data-lang="en">A three-day event for cartography and GIS professionals</p>
+            </div>
+
+            <div class="video-wrapper" style="margin-bottom: 2.5rem;">
+                <iframe src="https://www.youtube.com/embed/F_NmfBEodG0?si=LEu-xbFd5GYI6-C6"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div class="about-text-block">
+                <p data-lang="ka">ივანე ჯავახიშვილის სახელობის თბილისის სახელმწიფო უნივერსიტეტი (თსუ) და საქართველოს კარტოგრაფთა ასოციაცია (სკა) იწყებს საერთაშორისო სამეცნიერო კონფერენციების სერიის ჩატარებას სახელწოდებით „კარტოგრაფია და თანამედროვეობა", რომელიც გაიმართება 4 წელიწადში ერთხელ საქართველოში.</p>
+                <p data-lang="ka">რიგით პირველი კონფერენცია გაიმართება 2026 წლის 29–31 ოქტომბერს თბილისის სახელმწიფო უნივერსიტეტში. ღონისძიებამ უკვე მიიღო საერთაშორისო კარტოგრაფიული ასოციაციის (International Cartographic Association – ICA) ოფიციალური აღიარება და შეტანილია მის 2026 წლის ოფიციალური ღონისძიებების გრაფიკში.</p>
+                <p data-lang="ka">ინტერდისციპლინარული ღონისძიების მიზანია კარტოგრაფიის, გეოინფორმაციული სისტემების და სივრცითი მონაცემების ანალიზის სფეროში მომუშავე სხვადასხვა ქვეყნის წარმომადგენლების მოზიდვა, რათა მოხდეს უახლესი მიღწევების შესახებ დაგროვილი ცოდნისა და გამოცდილების გაზიარება. ასევე მოხდეს კარტოგრაფიული ტექნოლოგიების, მეთოდებისა და ინოვაციების გაცვლა და შეიქმნას პლატფორმა ამ სფეროებში მომუშავე ორგანიზაციებისა თუ ინდივიდუალური სპეციალისტების ეფექტური თანამშრომლობისათვის.</p>
+                <p data-lang="ka">პირველი კონფერენცია ეძღვნება გამოჩენილი ქართველი გეოგრაფისა და კარტოგრაფის, კარტოგრაფიის თეორიის ფუძემდებლის, საქართველოს მეცნიერებათა აკადემიის წევრ-კორესპოდენტის, გეოგრაფიულ მეცნიერებათა დოქტორის, პროფესორ <a href="#" class="about-link" onclick="openBioModal();return false;">ალექსანდრე ასლანიკაშვილის</a> დაბადებიდან 110 წლის იუბილეს.</p>
+
+                <p data-lang="en">Ivane Javakhishvili Tbilisi State University (TSU) and the Georgian Cartographers Association (GCA) are launching a series of international scientific conferences entitled "Cartography and Modernity", to be held once every four years in Georgia.</p>
+                <p data-lang="en">The first conference will take place on 29–31 October 2026 at Tbilisi State University. The event has already received official endorsement from the International Cartographic Association (ICA) and has been included in its official events schedule for 2026.</p>
+                <p data-lang="en">The aim of this interdisciplinary event is to bring together representatives from various countries working in the fields of cartography, geographic information systems and spatial data analysis, to share knowledge and experience on the latest advances, exchange cartographic technologies, methods and innovations, and to create a platform for effective collaboration among organisations and individual specialists in these fields.</p>
+                <p data-lang="en">The first conference is dedicated to the 110th anniversary of the birth of the outstanding Georgian geographer and cartographer, founder of cartographic theory, Corresponding Member of the Georgian Academy of Sciences, Doctor of Geographical Sciences, Professor <a href="#" class="about-link" onclick="openBioModal();return false;">Alexander Aslanikashvili</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizers -->
+    <section class="section section-alt" id="organizers">
+        <div class="section-container">
+
+            <!-- Part I: Organizer Orgs & Supporters -->
+            <div class="section-header">
+                <span class="section-label" data-lang="ka">I ნაწილი</span>
+                <span class="section-label" data-lang="en">Part I</span>
+                <h2 class="section-title" data-lang="ka">ორგანიზატორები და მხარდამჭერები</h2>
+                <h2 class="section-title" data-lang="en">Organizers &amp; Supporters</h2>
+            </div>
+
+            <p class="org-sublabel" data-lang="ka">ღონისძიების ორგანიზატორები</p>
+            <p class="org-sublabel" data-lang="en">Organized By</p>
+
+            <div class="org-logos-row">
+                <a href="https://www.tsu.ge/en" target="_blank" class="org-logo-card">
+                    <img src="assets/images/tsu.jpg" alt="Tbilisi State University logo">
+                    <span class="org-logo-name" data-lang="ka">ივანე ჯავახიშვილის სახელობის თბილისის სახელმწიფო უნივერსიტეტი</span>
+                    <span class="org-logo-name" data-lang="en">Ivane Javakhishvili Tbilisi State University</span>
+                </a>
+                <a href="https://gc.qgis.ge/ka" class="org-logo-card" target="_blank">
+                    <img src="assets/images/GCA.jpg" alt="Georgian Cartographers Association logo">
+                    <span class="org-logo-name" data-lang="ka">საქართველოს კარტოგრაფთა ასოციაცია</span>
+                    <span class="org-logo-name" data-lang="en">Georgian Cartographers Association</span>
+                </a>
+            </div>
+
+            <div class="org-separator">
+                <span class="org-separator-text" data-lang="ka">აღიარებული და მხარდაჭერილია საერთაშორისო კარტოგრაფიული ასოციაციის (ICA) მიერ</span>
+                <span class="org-separator-text" data-lang="en">Endorsed By</span>
+            </div>
+
+            <div class="org-supporter-row">
+                <a href="https://icaci.org/" target="_blank" class="org-logo-card">
+                    <img src="assets/images/ICA_logo_1500px.png" alt="International Cartographic Association logo">
+                    <span class="org-logo-name" data-lang="ka">საერთაშორისო კარტოგრაფიული ასოციაცია</span>
+                    <span class="org-logo-name" data-lang="en">International Cartographic Association</span>
+                </a>
+            </div>
+
+            <!-- Part II: Organizing Committee -->
+            <div class="committee-section">
+                <div class="section-header">
+                    <span class="section-label" data-lang="ka">II ნაწილი</span>
+                    <span class="section-label" data-lang="en">Part II</span>
+                    <h2 class="section-title" data-lang="ka">საორგანიზაციო კომიტეტი</h2>
+                    <h2 class="section-title" data-lang="en">Organizing Committee</h2>
+                </div>
+
+                <!-- Chairman -->
+                <div class="committee-chairman-card">
+                    <div class="cm-badge" data-lang="ka">საორგანიზაციო კომიტეტის თავმჯდომარე</div>
+                    <div class="cm-badge" data-lang="en">Chairman of the Organizing Committee</div>
+                    <div class="cm-name" data-lang="ka">ჯაბა სამუშია</div>
+                    <div class="cm-name" data-lang="en">Jaba Samushia</div>
+                    <div class="cm-role-sub" data-lang="ka">თსუ-ს რექტორი</div>
+                    <div class="cm-role-sub" data-lang="en">Rector of Tbilisi State University</div>
+                </div>
+
+                <!-- Honorary Chairs -->
+                <div class="committee-honorary">
+                    <div class="honorary-card">
+                        <span class="honorary-badge" data-lang="ka">საპატიო თავმჯდომარე</span>
+                        <span class="honorary-badge" data-lang="en">Honorary Chairman</span>
+                        <div class="cm-name" data-lang="ka">გეორგ გარტნერი</div>
+                        <div class="cm-name" data-lang="en">Georg Gartner</div>
+                        <div class="cm-role" data-lang="ka">ICA-ს პრეზიდენტი</div>
+                        <div class="cm-role" data-lang="en">President of ICA</div>
+                        <div class="cm-org">Vienna University of Technology<br>Vienna, Austria</div>
+                    </div>
+                    <div class="honorary-card">
+                        <span class="honorary-badge" data-lang="ka">საპატიო თავმჯდომარე</span>
+                        <span class="honorary-badge" data-lang="en">Honorary Chairman</span>
+                        <div class="cm-name" data-lang="ka">მილან კონეჩნი</div>
+                        <div class="cm-name" data-lang="en">Milan Konečný</div>
+                        <div class="cm-role" data-lang="ka">ICA-ს ყოფილი პრეზიდენტი</div>
+                        <div class="cm-role" data-lang="en">Former President of ICA</div>
+                        <div class="cm-org">Masaryk University<br>Brno, Czech Republic</div>
+                    </div>
+                </div>
+
+                <!-- Two-column member list -->
+                <div class="committee-cols">
+                    <!-- Local Members -->
+                    <div>
+                        <h3 class="committee-col-title" data-lang="ka">ადგილობრივი წევრები</h3>
+                        <h3 class="committee-col-title" data-lang="en">Local Members</h3>
+
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">ლაშა საღინაძე</div>
+                            <div class="cm-name" data-lang="en">Lasha Saghinadze</div>
+                            <div class="cm-org" data-lang="ka">თსუ-ს ადმინისტრაციის ხელმძღვანელი</div>
+                            <div class="cm-org" data-lang="en">Head of TSU Administration</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">გიორგი ღვედაშვილი</div>
+                            <div class="cm-name" data-lang="en">Giorgi Ghvedashvili</div>
+                            <div class="cm-org" data-lang="ka">თსუ-ს სამეცნიერო კვლევებისა და განვითარების დეპარტამენტის უფროსი</div>
+                            <div class="cm-org" data-lang="en">Head of TSU Research and Development Department</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">კახაბერ ჭეიშვილი</div>
+                            <div class="cm-name" data-lang="en">Kakhaber Cheishvili</div>
+                            <div class="cm-org" data-lang="ka">თსუ-ს რექტორის მოადგილე</div>
+                            <div class="cm-org" data-lang="en">Vice-Rector of TSU</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">პეტრე ბაბილუა</div>
+                            <div class="cm-name" data-lang="en">Petre Babilua</div>
+                            <div class="cm-org" data-lang="ka">თსუ-ს ზუსტ და საბუნებისმეტყველო მეცნიერებათა ფაკულტეტის დეკანი</div>
+                            <div class="cm-org" data-lang="en">Dean, Faculty of Exact and Natural Sciences, TSU</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">თენგიზ გორდეზიანი</div>
+                            <div class="cm-name" data-lang="en">Tengiz Gordeziani</div>
+                            <div class="cm-org" data-lang="ka">თსუ-ს გეოგრაფიის დეპარტამენტი<br>საქართველოს კარტოგრაფთა ასოციაციის პრეზიდენტი</div>
+                            <div class="cm-org" data-lang="en">TSU Geography Department<br>President, Georgian Cartographers Association</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">ნოდარ ელიზბარაშვილი</div>
+                            <div class="cm-name" data-lang="en">Nodar Elizbarashvili</div>
+                            <div class="cm-org" data-lang="ka">თსუ-ს გეოგრაფიის დეპარტამენტი<br>საერთაშორისო გეოგრაფიული კავშირის, ლანდშაფტური ანალიზისა და დაგეგმარების კომისიის საპატიო თავმჯდომარე</div>
+                            <div class="cm-org" data-lang="en">TSU Geography Department<br>Honorary Chair, IGU Commission on Landscape Analysis and Planning</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">დალი ნიკოლაიშვილი</div>
+                            <div class="cm-name" data-lang="en">Dali Nikolaishvili</div>
+                            <div class="cm-org" data-lang="ka">თსუ-ს გეოგრაფიის დეპარტამენტი<br>ICA-ს ეროვნული წარმომადგენელი</div>
+                            <div class="cm-org" data-lang="en">TSU Geography Department<br>National Representative to ICA</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">გოჩა გუძუაძე</div>
+                            <div class="cm-name" data-lang="en">Gocha Gudzuadze</div>
+                            <div class="cm-org" data-lang="ka">თსუ-ს გეოგრაფიის დეპარტამენტი<br>საქართველოს კარტოგრაფთა ასოციაციის ვიცე-პრეზიდენტი</div>
+                            <div class="cm-org" data-lang="en">TSU Geography Department<br>Vice-President, Georgian Cartographers Association</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">თედო გორგოძე</div>
+                            <div class="cm-name" data-lang="en">Tedo Gorgodze</div>
+                            <div class="cm-org" data-lang="ka">საქართველოს თავდაცვის სამინისტროს კარტოგრაფია-გეოდეზიის დეპარტამენტი<br>საქართველოს კარტოგრაფთა ასოციაციის ვიცე-პრეზიდენტი</div>
+                            <div class="cm-org" data-lang="en">Cartography-Geodesy Dept., Ministry of Defence of Georgia<br>Vice-President, GCA</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">ზურაბ ლაოშვილი</div>
+                            <div class="cm-name" data-lang="en">Zurab Laoshvili</div>
+                            <div class="cm-org" data-lang="ka">საქართველოს ტექნიკური უნივერსიტეტი<br>საქართველოს კარტოგრაფთა ასოციაციის ვიცე-პრეზიდენტი</div>
+                            <div class="cm-org" data-lang="en">Georgian Technical University<br>Vice-President, Georgian Cartographers Association</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">გიორგი კაპანაძე</div>
+                            <div class="cm-name" data-lang="en">Giorgi Kapanadze</div>
+                            <div class="cm-org" data-lang="ka">ბიზნესა და ტექნოლოგიების უნივერსიტეტი</div>
+                            <div class="cm-org" data-lang="en">BTU - Business and Technology University</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">საბა მოდებაძე</div>
+                            <div class="cm-name" data-lang="en">Saba Modebadze</div>
+                            <div class="cm-org" data-lang="ka">თსუ-ს გეოგრაფიის დეპარტამენტი<br>საქართველოს კარტოგრაფთა ასოციაციის გენერალური მდივანი</div>
+                            <div class="cm-org" data-lang="en">TSU Geography Department<br>Secretary General, Georgian Cartographers Association</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">მარიამ გაგოშაშვილი</div>
+                            <div class="cm-name" data-lang="en">Mariam Gagoshashvili</div>
+                            <div class="cm-org" data-lang="ka">თსუ-ს გეოგრაფიის დეპარტამენტი</div>
+                            <div class="cm-org" data-lang="en">TSU Geography Department</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">გიორგი აბრამიშვილი</div>
+                            <div class="cm-name" data-lang="en">Giorgi Abramishvili</div>
+                            <div class="cm-org" data-lang="ka">თსუ-ს გეოგრაფიის დეპარტამენტი</div>
+                            <div class="cm-org" data-lang="en">TSU Geography Department</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">ხატია ყველაშვილი</div>
+                            <div class="cm-name" data-lang="en">Khatia Khvelashvili</div>
+                            <div class="cm-org" data-lang="ka">თსუ-ს გეოგრაფიის დეპარტამენტი</div>
+                            <div class="cm-org" data-lang="en">TSU Geography Department</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">ლიკა ცერცვაძე</div>
+                            <div class="cm-name" data-lang="en">Lika Cercvadze</div>
+                            <div class="cm-org" data-lang="ka">თსუ-ს გეოგრაფიის დეპარტამენტი</div>
+                            <div class="cm-org" data-lang="en">TSU Geography Department</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">რევაზ თოლორდავა</div>
+                            <div class="cm-name" data-lang="en">Revaz Tolordava</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">მანანა შარაშენიძე</div>
+                            <div class="cm-name" data-lang="en">Manana Sharashenidze</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">რობერტ მაღლაკელიძე</div>
+                            <div class="cm-name" data-lang="en">Robert Maghlakelidze</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">ნელი ჯამასპაშვილი</div>
+                            <div class="cm-name" data-lang="en">Neli Jamaspashvili</div>
+                        </div>
+                        <span class="cm-coming-soon" data-lang="ka">მასალები სხვა წევრების შესახებ გამოქვეყნდება მალე…</span>
+                        <span class="cm-coming-soon" data-lang="en">Information about other members will be published soon…</span>
+                    </div>
+
+                    <!-- International Members -->
+                    <div>
+                        <h3 class="committee-col-title" data-lang="ka">საერთაშორისო წევრები</h3>
+                        <h3 class="committee-col-title" data-lang="en">International Members</h3>
+
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">ტომას შულცი</div>
+                            <div class="cm-name" data-lang="en">Thomas Schulz</div>
+                            <div class="cm-org" data-lang="ka">ICA-ს გენერალური მდივანი<br>ბაზელი, შვეიცარია</div>
+                            <div class="cm-org" data-lang="en">ICA Secretary General<br>Basel, Switzerland</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">დუშან პეტროვიჩი</div>
+                            <div class="cm-name" data-lang="en">Dušan Petrovič</div>
+                            <div class="cm-org" data-lang="ka">ICA-ს ვიცე-პრეზიდენტი<br>ლიუბლიანას უნივერსიტეტი, სლოვენია</div>
+                            <div class="cm-org" data-lang="en">ICA Vice-President<br>University of Ljubljana, Slovenia</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">დარიუშ დუხაჟევსკი</div>
+                            <div class="cm-name" data-lang="en">Dariusz Dukaczewski</div>
+                            <div class="cm-org" data-lang="ka">ICA-ს ვიცე-პრეზიდენტი<br>გეოდეზიისა და კარტოგრაფიის ინსტიტუტი, ვარშავა, პოლონეთი</div>
+                            <div class="cm-org" data-lang="en">ICA Vice-President<br>Institute of Geodesy and Cartography, Warsaw, Poland</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">ლიკიუ მენი</div>
+                            <div class="cm-name" data-lang="en">Liqiu Meng</div>
+                            <div class="cm-org" data-lang="ka">ICA-ს ყოფილი ვიცე-პრეზიდენტი<br>მიუნხენის ტექნიკური უნივერსიტეტი, გერმანია</div>
+                            <div class="cm-org" data-lang="en">Former ICA Vice-President<br>Technical University of Munich, Germany</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">ტემენუშკა ბანდროვა</div>
+                            <div class="cm-name" data-lang="en">Temenoujka Bandrova</div>
+                            <div class="cm-org" data-lang="ka">ბულგარეთის კარტოგრაფიული ასოციაციის პრეზიდენტი<br>International Society for Digital Earth-ის ბიუროს წევრი<br>ფოტოგრამეტრიისა და კარტოგრაფიის დეპარტამენტის ხელმძღვანელი, UACEG, სოფია</div>
+                            <div class="cm-org" data-lang="en">President, Bulgarian Cartographic Association<br>Bureau member, International Society for Digital Earth<br>Head, Department of Photogrammetry and Cartography, UACEG, Sofia</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">ალექსანდრ ვოლოდჩენკო</div>
+                            <div class="cm-name" data-lang="en">Alexander Wolodtschenko</div>
+                            <div class="cm-org" data-lang="ka">გერმანიის სემიოტიკის ასოციაცია<br>დრეზდენი, გერმანია</div>
+                            <div class="cm-org" data-lang="en">German Semiotic Association<br>Dresden, Germany</div>
+                        </div>
+                        <div class="cm-member">
+                            <div class="cm-name" data-lang="ka">მილენკო ლაპენი</div>
+                            <div class="cm-name" data-lang="en">Miljenko Lapaine</div>
+                            <div class="cm-org" data-lang="ka">ხორვატიის კარტოგრაფიული საზოგადოების პრეზიდენტი<br>ზაგრები, ხორვატია</div>
+                            <div class="cm-org" data-lang="en">President, Croatian Cartographic Society<br>Zagreb, Croatia</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Programme -->
+    <section class="section section-dark" id="programme">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-lang="ka">პროგრამა</span>
+                <span class="section-label" data-lang="en">Programme</span>
+                <h2 class="section-title" data-lang="ka">კონფერენციის განრიგი</h2>
+                <h2 class="section-title" data-lang="en">Conference Schedule</h2>
+            </div>
+            <div class="schedule-tabs">
+                <button class="schedule-tab active" data-day="1" data-lang="ka">დღე 1 — 29 ოქტ.</button>
+                <button class="schedule-tab active" data-day="1" data-lang="en">Day 1 — Oct 29</button>
+                <button class="schedule-tab" data-day="2" data-lang="ka">დღე 2 — 30 ოქტ.</button>
+                <button class="schedule-tab" data-day="2" data-lang="en">Day 2 — Oct 30</button>
+                <button class="schedule-tab" data-day="3" data-lang="ka">დღე 3 — 31 ოქტ.</button>
+                <button class="schedule-tab" data-day="3" data-lang="en">Day 3 — Oct 31</button>
+            </div>
+
+            <!-- Day 1 -->
+            <div class="schedule-content active" id="day1">
+                <div class="schedule-item no-time">
+                    <div class="schedule-bullet">◆</div>
+                    <div class="schedule-details">
+                        <h4 data-lang="ka">რეგისტრაცია</h4>
+                        <h4 data-lang="en">Registration</h4>
+                    </div>
+                </div>
+                <div class="schedule-item no-time">
+                    <div class="schedule-bullet">◆</div>
+                    <div class="schedule-details">
+                        <h4 data-lang="ka">გახსნის ცერემონია</h4>
+                        <h4 data-lang="en">Opening Ceremony</h4>
+                    </div>
+                </div>
+                <div class="schedule-item no-time">
+                    <div class="schedule-bullet">◆</div>
+                    <div class="schedule-details">
+                        <h4 data-lang="ka">საკონფერენციო სესიები</h4>
+                        <h4 data-lang="en">Conference Sessions</h4>
+                    </div>
+                </div>
+                <div class="schedule-item no-time">
+                    <div class="schedule-bullet">◆</div>
+                    <div class="schedule-details">
+                        <h4 data-lang="ka">კარტოგრაფიული პროდუქციის გამოფენა</h4>
+                        <h4 data-lang="en">Exhibition of Cartographic Products</h4>
+                    </div>
+                </div>
+                <p class="schedule-coming-soon" data-lang="ka">დეტალური განრიგი გამოქვეყნდება მალე…</p>
+                <p class="schedule-coming-soon" data-lang="en">Detailed schedule will be published soon…</p>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="schedule-content" id="day2">
+                <div class="schedule-item no-time">
+                    <div class="schedule-bullet">◆</div>
+                    <div class="schedule-details">
+                        <h4 data-lang="ka">საკონფერენციო სესიები</h4>
+                        <h4 data-lang="en">Conference Sessions</h4>
+                    </div>
+                </div>
+                <div class="schedule-item no-time">
+                    <div class="schedule-bullet">◆</div>
+                    <div class="schedule-details">
+                        <h4 data-lang="ka">კარტოგრაფიული პროდუქციის გამოფენა</h4>
+                        <h4 data-lang="en">Exhibition of Cartographic Products</h4>
+                    </div>
+                </div>
+                <div class="schedule-item no-time">
+                    <div class="schedule-bullet">◆</div>
+                    <div class="schedule-details">
+                        <h4 data-lang="ka">ვახშამი</h4>
+                        <h4 data-lang="en">Dinner</h4>
+                    </div>
+                </div>
+                <p class="schedule-coming-soon" data-lang="ka">დეტალური განრიგი გამოქვეყნდება მალე…</p>
+                <p class="schedule-coming-soon" data-lang="en">Detailed schedule will be published soon…</p>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="schedule-content" id="day3">
+                <div class="schedule-item no-time">
+                    <div class="schedule-bullet">◆</div>
+                    <div class="schedule-details">
+                        <h4 data-lang="ka">ექსკურსია <span style="font-weight:400; font-size:0.9em; opacity:0.8;">(არჩევა ნებაყოფლობითია)</span></h4>
+                        <h4 data-lang="en">Guided Tour <span style="font-weight:400; font-size:0.9em; opacity:0.8;">(optional)</span></h4>
+                    </div>
+                </div>
+                <p class="schedule-coming-soon" data-lang="ka">დეტალური განრიგი გამოქვეყნდება მალე…</p>
+                <p class="schedule-coming-soon" data-lang="en">Detailed schedule will be published soon…</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour -->
+    <section class="section" id="tour">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-lang="ka">ექსკურსია</span>
+                <span class="section-label" data-lang="en">Guided Tour</span>
+                <h2 class="section-title" data-lang="ka">ექსკურსია</h2>
+                <h2 class="section-title" data-lang="en">Guided Tour</h2>
+            </div>
+            <div class="tour-content">
+                <div class="tour-image">🗺️</div>
+                <div class="tour-info">
+                    <div class="tour-details">
+                        <div class="tour-detail">
+                            <div class="tour-detail-icon">📅</div>
+                            <div class="tour-detail-text">
+                                <h4 data-lang="ka">თარიღი</h4>
+                                <h4 data-lang="en">Date</h4>
+                                <p data-lang="ka">31 ოქტომბერი, 10:00 სთ.</p>
+                                <p data-lang="en">October 31, 10:00</p>
+                            </div>
+                        </div>
+                        <div class="tour-detail">
+                            <div class="tour-detail-icon">📍</div>
+                            <div class="tour-detail-text">
+                                <h4 data-lang="ka">მარშრუტი</h4>
+                                <h4 data-lang="en">Route</h4>
+                                <p data-lang="ka">ექსკურსიის ზუსტი მარშრუტი გამოქვეყნდება მალე…</p>
+                                <p data-lang="en">The exact tour route will be published soon…</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exhibition -->
+    <!-- Submission -->
+    <section class="section" id="submission">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-lang="ka">ნაშრომების გაგზავნა</span>
+                <span class="section-label" data-lang="en">Submission</span>
+                <h2 class="section-title" data-lang="ka">ნაშრომების გაგზავნა</h2>
+                <h2 class="section-title" data-lang="en">Submission</h2>
+            </div>
+
+            <!-- Submission intro + formatting + dates -->
+            <div class="submission-block">
+                <p data-lang="ka">აბსტრაქტის და სტატიის გაგზავნა შესაძლებელია რეგისტრაციის ფორმის შევსების შემდეგ
+                (<a href="#registration" class="about-link" data-lang="ka">გადადით რეგისტრაციის ბმულზე</a>).</p>
+                <p data-lang="en">Abstracts and full papers can be submitted after completing the registration form
+                (<a href="#registration" class="about-link" data-lang="en">Fill out the registration form</a>).</p>
+
+                <h3 data-lang="ka">ფორმატირების მოთხოვნები</h3>
+                <h3 data-lang="en">Formatting Requirements</h3>
+                <ul class="submission-list" data-lang="ka">
+                    <li>მოცულობა: 4–8 გვერდი (A4)</li>
+                    <li>ფონტი: Times New Roman, 12pt</li>
+                    <li>ინტერვალი: 1.5</li>
+                    <li>ციტირება: APA სტილი</li>
+                </ul>
+                <ul class="submission-list" data-lang="en">
+                    <li>Length: 4–8 pages (A4)</li>
+                    <li>Font: Times New Roman, 12pt</li>
+                    <li>Line spacing: 1.5</li>
+                    <li>Citation style: APA</li>
+                </ul>
+
+                <h3 data-lang="ka">მნიშვნელოვანი თარიღები</h3>
+                <h3 data-lang="en">Important Dates</h3>
+                <div class="submission-dates">
+                    <div class="submission-date-item">
+                        <div class="submission-date-icon">🟢</div>
+                        <div class="submission-date-text">
+                            <strong data-lang="ka">აბსტრაქტების წარდგენა დაიწყო</strong>
+                            <strong data-lang="en">Abstract submission opened</strong>
+                        </div>
+                    </div>
+                    <div class="submission-date-item">
+                        <div class="submission-date-icon">📝</div>
+                        <div class="submission-date-text">
+                            <strong data-lang="ka">აბსტრაქტების წარდგენის ბოლო ვადა</strong>
+                            <strong data-lang="en">Abstract submission deadline</strong>
+                            <span data-lang="ka">1 ივლისი, 2026</span>
+                            <span data-lang="en">July 1, 2026</span>
+                        </div>
+                    </div>
+                    <div class="submission-date-item">
+                        <div class="submission-date-icon">📄</div>
+                        <div class="submission-date-text">
+                            <strong data-lang="ka">სტატიების წარდგენის ბოლო ვადა</strong>
+                            <strong data-lang="en">Full paper submission deadline</strong>
+                            <span data-lang="ka">1 სექტემბერი, 2026</span>
+                            <span data-lang="en">September 1, 2026</span>
+                        </div>
+                    </div>
+                    <div class="submission-date-item">
+                        <div class="submission-date-icon">📬</div>
+                        <div class="submission-date-text">
+                            <strong data-lang="ka">განხილვის შედეგების შეტყობინება</strong>
+                            <strong data-lang="en">First-round reviews &amp; notifications</strong>
+                            <span data-lang="ka">30 სექტემბერი, 2026</span>
+                            <span data-lang="en">September 30, 2026</span>
+                        </div>
+                    </div>
+                    <div class="submission-date-item">
+                        <div class="submission-date-icon">🗓️</div>
+                        <div class="submission-date-text">
+                            <strong data-lang="ka">კონფერენცია</strong>
+                            <strong data-lang="en">Conference</strong>
+                            <span data-lang="ka">29–31 ოქტომბერი, 2026</span>
+                            <span data-lang="en">October 29–31, 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topics -->
+            <div class="topics-block">
+                <h3 data-lang="ka">თემები</h3>
+                <h3 data-lang="en">Topics</h3>
+                <ul class="topics-list" data-lang="ka">
+                    <li>კარტოგრაფია და გეოინფორმაციული სისტემები</li>
+                    <li>თეორიული კარტოგრაფია</li>
+                    <li>თემატური კარტოგრაფია</li>
+                    <li>ტოპოგრაფიული რუკების შედგენა</li>
+                    <li>ატლასური კარტოგრაფია</li>
+                    <li>კარტოგრაფიის ისტორია</li>
+                    <li>კარტოგრაფიული მემკვიდრეობა</li>
+                    <li>კარტოგრაფია და განათლება</li>
+                    <li>კარტოგრაფიული ხელოვნება და დიზაინი</li>
+                    <li>დიდი გეოგრაფიული მონაცემების დამუშავება</li>
+                    <li>გეოსივრცითი ანალიზი</li>
+                    <li>დისტანციური ზონდირება კარტოგრაფიული აპლიკაციებისთვის</li>
+                    <li>განზოგადება და მრავალმასშტაბიანი წარმოდგენა</li>
+                    <li>გეოვიზუალიზაცია და გეოვიზუალური ანალიტიკა</li>
+                    <li>კარტოგრაფია და გეოინფორმაციული ტექნოლოგიები ადრეული გაფრთხილებისა და კატასტროფების რისკის შემცირებისთვის</li>
+                    <li>გეოინფორმაციული სისტემები ჭკვიანი და მდგრადი ქალაქებისთვის</li>
+                    <li>გეოლოგიის, ბუნების მეცნიერებებისა და ეკოსისტემებისთვის</li>
+                    <li>გეოინფორმაციული სისტემების ტექნოლოგიები და ინტერდისციპლინარული აპლიკაციები</li>
+                    <li>ადგილმდებარეობაზე დაფუძნებული სერვისები და ყველგან გავრცელებული კარტოგრაფია</li>
+                    <li>რუკის გამოყენება, გამოყენებადობა და შემეცნება</li>
+                    <li>მთის კარტოგრაფია</li>
+                    <li>ღია კოდის გეოსივრცითი ტექნოლოგიები</li>
+                    <li>სემიოტიკა და რუკის დიზაინი</li>
+                    <li>სივრცითი მონაცემების ინფრასტრუქტურა</li>
+                    <li>სივრცულ-დროითი მონაცემების ვიზუალიზაცია</li>
+                    <li>რუკის პროექციები და გეოდეზიური საცნობარო სისტემები</li>
+                    <li>ტოპონიმია</li>
+                    <li>სტატისტიკური მონაცემების ვიზუალიზაცია</li>
+                    <li>ვებ კარტოგრაფია და რუკის სერვისები</li>
+                </ul>
+                <ul class="topics-list" data-lang="en">
+                    <li>Cartography and Geographic Information Systems</li>
+                    <li>Theoretical Cartography</li>
+                    <li>Thematic Cartography</li>
+                    <li>Topographic Map Production</li>
+                    <li>Atlas Cartography</li>
+                    <li>History of Cartography</li>
+                    <li>Cartographic Heritage</li>
+                    <li>Cartography and Education</li>
+                    <li>Cartographic Art and Design</li>
+                    <li>Big Geospatial Data Processing</li>
+                    <li>Geospatial Analysis</li>
+                    <li>Remote Sensing for Cartographic Applications</li>
+                    <li>Generalisation and Multi-scale Representation</li>
+                    <li>Geovisualisation and Geovisual Analytics</li>
+                    <li>Cartography and GIS Technologies for Early Warning and Disaster Risk Reduction</li>
+                    <li>GIS for Smart and Sustainable Cities</li>
+                    <li>Geology, Natural Sciences and Ecosystems</li>
+                    <li>GIS Technologies and Interdisciplinary Applications</li>
+                    <li>Location-Based Services and Ubiquitous Cartography</li>
+                    <li>Map Use, Usability and Cognition</li>
+                    <li>Mountain Cartography</li>
+                    <li>Open Source Geospatial Technologies</li>
+                    <li>Semiotics and Map Design</li>
+                    <li>Spatial Data Infrastructure</li>
+                    <li>Spatio-Temporal Data Visualisation</li>
+                    <li>Map Projections and Geodetic Reference Systems</li>
+                    <li>Toponymy</li>
+                    <li>Statistical Data Visualisation</li>
+                    <li>Web Cartography and Map Services</li>
+                </ul>
+                <p class="topics-note" data-lang="ka">თემების ეს ჩამონათვალი არ არის საბოლოო და ავტორებს შეუძლიათ წარმოადგინონ კარტოგრაფიასთან, გეოინფორმატიკასა და გეოსივრცულ მონაცემებთან დაკავშირებული სხვა თემებიც.</p>
+                <p class="topics-note" data-lang="en">This list of topics is not final and authors are welcome to submit papers on other subjects related to cartography, geoinformatics and geospatial data.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration -->
+    <section class="section section-blue" id="registration">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" style="color: var(--gold-light);" data-lang="ka">რეგისტრაცია</span>
+                <span class="section-label" style="color: var(--gold-light);" data-lang="en">Registration</span>
+                <h2 class="section-title" data-lang="ka">დარეგისტრირდით კონფერენციაზე</h2>
+                <h2 class="section-title" data-lang="en">Register for the Conference</h2>
+            </div>
+            <div class="registration-content">
+                <div class="google-form-container">
+                    <h3 data-lang="ka">რეგისტრაციის ფორმა</h3>
+                    <h3 data-lang="en">Registration Form</h3>
+
+                    <div class="registration-info" data-lang="ka">
+                        <p>რეგისტრაციის გასავლელად შეავსეთ რეგისტრაციის ფორმა.</p>
+                        <p>რეგისტრაციის საფასურის გადახდა შესაძლებელია ადგილზე.</p>
+                        <p>მონაწილის რეგისტრაციის სტანდარტული საფასური — <strong>200 ევრო</strong></p>
+                        <p>საქართველოს კარტოგრაფთა ასოციაციის (სკა) წევრებისთვის მოქმედებს შეღავათი.</p>
+                        <p>სკა-ს წევრის რეგისტრაციის საფასური — <strong>150 ლარი</strong></p>
+                        <p><em>(იხილეთ: <a href="#faq" class="about-link">რა შედის სკა-ს წევრის რეგისტრაციის საფასურში?</a>)</em></p>
+                    </div>
+                    <div class="registration-info" data-lang="en">
+                        <p>To register, please fill out the registration form.</p>
+                        <p>Registration fees can be paid on-site.</p>
+                        <p>Participant Regular Registration fee — <strong>€200</strong></p>
+                        <p>Members of the Georgian Cartographers Association (GCA) are provided with a discount.</p>
+                        <p>Registration fee for GCA members — <strong>150 GEL</strong></p>
+                    </div>
+
+                    <a href="https://forms.gle/9QAk4KyFcTPeAuGMA" target="_blank" class="form-link-btn" data-lang="ka">📝 რეგისტრაციის ფორმა →</a>
+                    <a href="https://forms.gle/9QAk4KyFcTPeAuGMA" target="_blank" class="form-link-btn" data-lang="en">📝 Registration Form →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceedings -->
+    <section class="section section-alt" id="proceedings">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-lang="ka">გამოქვეყნება</span>
+                <span class="section-label" data-lang="en">Proceedings</span>
+                <h2 class="section-title" data-lang="ka">მასალების გამოქვეყნება</h2>
+                <h2 class="section-title" data-lang="en">Publication</h2>
+            </div>
+            <div class="proceedings-content">
+                <p data-lang="ka">მიღებული სტატიების მიხედვით, თბილისის სახელმწიფო უნივერსიტეტი გეგმავს გამოსცეს კონფერენციის მასალების კრებული, რომელიც დაურიგდებათ კონფერენციის მონაწილეებს.</p>
+                <p data-lang="ka">კრებულის ელექტრონული ვერსია განთავსდება Google Scholar-ის მონაცემთა ბაზაში.</p>
+                <p data-lang="en">Based on the accepted papers, Tbilisi State University plans to publish the conference proceedings, which will be presented to conference participants.</p>
+                <p data-lang="en">An electronic version of the conference proceedings will be posted in the Google Scholar database.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venue -->
+    <section class="section" id="venue">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-lang="ka">ადგილმდებარეობა</span>
+                <span class="section-label" data-lang="en">Venue</span>
+                <h2 class="section-title" data-lang="ka">კონფერენციის ჩატარების ადგილი</h2>
+                <h2 class="section-title" data-lang="en">Conference Venue</h2>
+            </div>
+            <div class="venue-content">
+                <div class="venue-map" id="map"></div>
+                <div class="venue-info">
+                    <h3 data-lang="ka">თბილისის სახელმწიფო უნივერსიტეტი</h3>
+                    <h3 data-lang="en">Tbilisi State University</h3>
+                    <div class="venue-details">
+                        <div class="venue-detail">
+                            <div class="venue-detail-icon">📍</div>
+                            <div class="venue-detail-text">
+                                <h4 data-lang="ka">მისამართი</h4>
+                                <h4 data-lang="en">Address</h4>
+                                <p data-lang="ka">ი. ჭავჭავაძის გამზ. 3, თბილისი 0128</p>
+                                <p data-lang="en">I. Chavchavadze Ave. 3, Tbilisi 0128</p>
+                            </div>
+                        </div>
+                        <div class="venue-detail">
+                            <div class="venue-detail-icon">🚇</div>
+                            <div class="venue-detail-text">
+                                <h4 data-lang="ka">ტრანსპორტი</h4>
+                                <h4 data-lang="en">Transportation</h4>
+                                <p data-lang="ka">მეტრო "რუსთაველი" - 10 წუთი</p>
+                                <p data-lang="en">Metro "Rustaveli" - 10 min walk</p>
+                            </div>
+                        </div>
+                        <div class="venue-detail">
+                            <div class="venue-detail-icon">🅿️</div>
+                            <div class="venue-detail-text">
+                                <h4 data-lang="ka">პარკინგი</h4>
+                                <h4 data-lang="en">Parking</h4>
+                                <p data-lang="ka">უფასო პარკინგი მონაწილეებისთვის</p>
+                                <p data-lang="en">Free parking for participants</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://www.google.com/maps/place/Ivane+Javakhishvili+Tbilisi+State+University/@41.7098684,44.7784941,141m/data=!3m1!1e3!4m6!3m5!1s0x40440cd30294b88b:0x9cfe7a9b37f34a36!8m2!3d41.7099824!4d44.7779992!16zL20vMDI3ZmRf?entry=ttu&g_ep=EgoyMDI2MDUxMC4wIKXMDSoASAFQAw%3D%3D"
+                       target="_blank" rel="noopener" class="btn btn-primary venue-gmaps-btn" style="margin-top:1.75rem; display:inline-flex;">
+                        <span data-lang="ka">🗺️ Google Maps-ზე ნახვა</span>
+                        <span data-lang="en">🗺️ View on Google Maps</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title" data-lang="ka">ხშირად დასმული კითხვები</h2>
+                <h2 class="section-title" data-lang="en">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-lang="ka">როგორ დავრეგისტრირდე?</span>
+                        <span data-lang="en">How do I register?</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-lang="ka">შეავსეთ Google ფორმა ვებგვერდზე. რეგისტრაცია უფასოა.</p>
+                        <p data-lang="en">Fill out the Google Form on our website. Registration is free.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-lang="ka">კონფერენციის სამუშაო ენა</span>
+                        <span data-lang="en">Conference working languages (Georgian, English)</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-lang="ka">კონფერენცია იმუშავებს ქართულ და ინგლისურ ენებზე.</p>
+                        <p data-lang="en">The conference will be in Georgian and English.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-lang="ka">რეგისტრაციის საფასური</span>
+                        <span data-lang="en">Registration fee</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-lang="ka">მონაწილის რეგისტრაციის სტანდარტული საფასური — <strong>200 ევრო</strong><br>
+                        საქართველოს კარტოგრაფთა ასოციაციის (სკა) წევრებისთვის მოქმედებს შეღავათი.<br>
+                        სკა-ს წევრის რეგისტრაციის საფასური — <strong>150 ლარი</strong><br>
+                        <em>(იხილეთ: რა შედის სკა-ს წევრის რეგისტრაციის საფასურში?)</em></p>
+                        <p data-lang="en">Participant Regular Registration fee — <strong>€200</strong><br>
+                        Members of the Georgian Cartographers Association (GCA) are provided with a discount.<br>
+                        Registration fee for GCA members — <strong>150 GEL</strong></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-lang="ka">რა შედის რეგისტრაციის სტანდარტულ საფასურში?</span>
+                        <span data-lang="en">What is included in the Participant Regular Registration fee?</span>
+                    </div>
+                    <div class="faq-answer">
+                        <ul data-lang="ka">
+                            <li>კონფერენციაზე დასწრება</li>
+                            <li>კონფერენციის დოკუმენტები</li>
+                            <li>ჩანთა</li>
+                            <li>სამკერდე ნიშანი</li>
+                            <li>კონფერენციის მასალების კრებული</li>
+                            <li>სერტიფიკატი</li>
+                            <li>გახსნის საზეიმო ღონისძიება</li>
+                            <li>ყავის შესვენებები</li>
+                            <li>გალა ვახშამი</li>
+                            <li>ექსკურსია</li>
+                        </ul>
+                        <ul data-lang="en">
+                            <li>Attendance at the Conference</li>
+                            <li>Conference documents</li>
+                            <li>Bag</li>
+                            <li>Badge</li>
+                            <li>Conference Proceeding</li>
+                            <li>Certificate</li>
+                            <li>Welcome reception</li>
+                            <li>Coffee breaks</li>
+                            <li>Gala Dinner</li>
+                            <li>Excursion</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-lang="ka">რა შედის სკა-ს წევრის რეგისტრაციის საფასურში?</span>
+                        <span data-lang="en">What is included in the GCA member registration fee?</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-lang="ka"><strong>შედის:</strong></p>
+                        <ul data-lang="ka">
+                            <li>კონფერენციაზე დასწრება</li>
+                            <li>კონფერენციის დოკუმენტები</li>
+                            <li>ჩანთა</li>
+                            <li>სამკერდე ნიშანი</li>
+                            <li>კონფერენციის მასალების კრებული</li>
+                            <li>სერტიფიკატი</li>
+                            <li>გახსნის საზეიმო ღონისძიება</li>
+                            <li>ყავის შესვენებები</li>
+                        </ul>
+                        <p data-lang="ka"><strong>არ შედის:</strong></p>
+                        <ul data-lang="ka">
+                            <li>გალა ვახშამი</li>
+                            <li>ექსკურსია</li>
+                        </ul>
+                        <p data-lang="ka">აღნიშნულ ღონისძიებებზე დასწრება ნებაყოფლობითია და მათი საფასური გეცნობებათ მალე.</p>
+                        <p data-lang="en"><strong>Included:</strong></p>
+                        <ul data-lang="en">
+                            <li>Attendance at the Conference</li>
+                            <li>Conference documents</li>
+                            <li>Bag</li>
+                            <li>Badge</li>
+                            <li>Conference Proceeding</li>
+                            <li>Certificate</li>
+                            <li>Welcome reception</li>
+                            <li>Coffee breaks</li>
+                        </ul>
+                        <p data-lang="en"><strong>Not included:</strong></p>
+                        <ul data-lang="en">
+                            <li>Gala Dinner</li>
+                            <li>Excursion</li>
+                        </ul>
+                        <p data-lang="en">Attendance at these events is optional and their fees will be announced soon.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-lang="ka">შემიძლია ნაშრომის წარდგენა?</span>
+                        <span data-lang="en">Can I submit a paper?</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-lang="ka">დიახ, აბსტრაქტების მიღება დაიწყება 18 მაისიდან.</p>
+                        <p data-lang="en">Yes, abstract submission opens on May 1st.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-lang="ka">უზრუნველყოფილია კვება?</span>
+                        <span data-lang="en">Will food be provided?</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-lang="ka">დიახ, ყავის შესვენებები და ლანჩი უზრუნველყოფილია.</p>
+                        <p data-lang="en">Yes, coffee breaks and lunch will be provided.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-lang="ka">კონტაქტი</span>
+                <span class="section-label" data-lang="en">Contact</span>
+                <h2 class="section-title" data-lang="ka">დაგვიკავშირდით</h2>
+                <h2 class="section-title" data-lang="en">Get in Touch</h2>
+            </div>
+            <div class="contact-center">
+                <div class="contact-info-centered">
+                    <h3>Georgian Cartographers Association</h3>
+                    <p class="org-name-ka">საქართველოს კარტოგრაფთა ასოციაცია</p>
+                    <div class="contact-details-centered">
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">📍</div>
+                            <div data-lang="ka">ი. ჭავჭავაძის გამზ. 3, თბილისი 0128</div>
+                            <div data-lang="en">I. Chavchavadze Ave. 3, Tbilisi 0128</div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">📧</div>
+                            <div>
+                                <a href="mailto:geocartographersassoc@gmail.com">geocartographersassoc@gmail.com</a><br>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">📞</div>
+                            <div>
+                                <span data-lang="ka">საბა მოდებაძე: </span><span data-lang="en">Saba Modebadze: </span><a href="tel:+995579711715">579 711 715</a><br>
+                                <span data-lang="ka">გოჩა გუძუაძე: </span><span data-lang="en">Gocha Gudzuadze: </span><a href="tel:+995577554429">577 554 429</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">🌐</div>
+                            <div><a href="https://gc.qgis.ge/ka" target="_blank">gc.qgis.ge/ka</a></div>
+                        </div>
+                    </div>
+                    <div class="social-links-centered">
+                        <a href="https://www.facebook.com/profile.php?id=61556291459201" target="_blank" class="social-link">f</a>
+                        <a href="https://www.instagram.com/gca_ska" target="_blank" class="social-link">📷</a>
+                        <a href="https://www.youtube.com/@GeorgianCartographersAssoc" target="_blank" class="social-link">▶</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biography Modal: Alexander Aslanikashvili -->
+    <div class="bio-modal" id="bioModal" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="bioModalTitle">
+        <div class="bio-modal-overlay" onclick="closeBioModal()"></div>
+        <div class="bio-modal-inner">
+            <button class="bio-modal-close" onclick="closeBioModal()" aria-label="Close">✕</button>
+            <div class="bio-modal-content">
+
+                <!-- Language tabs -->
+                <div class="bio-lang-tabs">
+                    <button class="bio-lang-btn active" id="bioLangKa" onclick="setBioLang('ka')">ქართული</button>
+                    <button class="bio-lang-btn" id="bioLangEn" onclick="setBioLang('en')">English</button>
+                </div>
+
+                <!-- Header: photo + name + roles -->
+                <div class="bio-header">
+                    <div class="bio-photo">
+                        <img src="assets/images/Aleksander_aslanikashvili.jpg"
+                             alt="ალექსანდრე ასლანიკაშვილი"
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="bio-photo-placeholder" style="display:none;">🗺️</div>
+                    </div>
+                    <div class="bio-identity">
+                        <h2 class="bio-name" id="bioModalTitle">
+                            <span class="bio-ka">ალექსანდრე ასლანიკაშვილი</span>
+                            <span class="bio-en bio-hidden">Alexander Aslanikashvili</span>
+                        </h2>
+                        <p class="bio-dates">1916 – 1981</p>
+                        <ul class="bio-roles">
+                            <li><span class="bio-ka">კარტოგრაფიის თეორიის ფუძემდებელი</span><span class="bio-en bio-hidden">Founder of Cartographic Theory</span></li>
+                            <li><span class="bio-ka">გეოგრაფიულ მეცნიერებათა დოქტორი, პროფესორი</span><span class="bio-en bio-hidden">Doctor of Geographical Sciences, Professor</span></li>
+                            <li><span class="bio-ka">საქართველოს მეცნიერებათა აკადემიის წევრ-კორესპოდენტი</span><span class="bio-en bio-hidden">Corresponding Member of the Georgian Academy of Sciences</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline -->
+                <div class="bio-timeline">
+                    <div class="bio-tl-item">
+                        <span class="bio-tl-year">1955–1957</span>
+                        <span class="bio-tl-desc"><span class="bio-ka">თბილისის სახელმწიფო უნივერსიტეტის გეოგრაფია-გეოლოგიის ფაკულტეტის დეკანი</span><span class="bio-en bio-hidden">Dean of the Faculty of Geography and Geology, Tbilisi State University</span></span>
+                    </div>
+                    <div class="bio-tl-item">
+                        <span class="bio-tl-year">1969</span>
+                        <span class="bio-tl-desc"><span class="bio-ka">სადოქტორო დისერტაცია: „კარტოგრაფია, ზოგადი თეორიის საკითხები"</span><span class="bio-en bio-hidden">Doctoral dissertation: "Cartography, Issues of General Theory"</span></span>
+                    </div>
+                    <div class="bio-tl-item">
+                        <span class="bio-tl-year">1972–1981</span>
+                        <span class="bio-tl-desc"><span class="bio-ka">თსუ კარტოგრაფია-გეოდეზიის კათედრის გამგე</span><span class="bio-en bio-hidden">Head of the Chair of Cartography and Geodesy, TSU</span></span>
+                    </div>
+                    <div class="bio-tl-item">
+                        <span class="bio-tl-year">1979–1981</span>
+                        <span class="bio-tl-desc"><span class="bio-ka">საქართველოს მეცნიერებათა აკადემიის წევრ-კორესპოდენტი</span><span class="bio-en bio-hidden">Corresponding Member of the Georgian Academy of Sciences</span></span>
+                    </div>
+                    <div class="bio-tl-item">
+                        <span class="bio-tl-year">1980–1981</span>
+                        <span class="bio-tl-desc"><span class="bio-ka">საქართველოს მეცნ. აკადემიის ვახუშტის სახ. გეოგრაფიის ინსტიტუტის დირექტორი</span><span class="bio-en bio-hidden">Director of the Vakhushti Institute of Geography, Georgian Academy of Sciences</span></span>
+                    </div>
+                    <div class="bio-tl-item">
+                        <span class="bio-tl-year">1999</span>
+                        <span class="bio-tl-desc"><span class="bio-ka">„მეტაკარტოგრაფია. ძირითადი პრობლემები" — თარგმნილია იაპონურ ენაზე</span><span class="bio-en bio-hidden">"Metacartography. Main Problems" — translated and published in Japanese</span></span>
+                    </div>
+                </div>
+
+                <!-- Georgian biography -->
+                <div class="bio-text bio-ka">
+                    <p>ცნობილი ქართველი კარტოგრაფი, გეოგრაფიის მეცნიერებათა დოქტორი, პროფესორი ალექსანდრე ასლანიკაშვილი ითვლება კარტოგრაფიის თეორიის ფუძემდებლად. მან პირველმა დაამუშავა კარტოგრაფიის ზოგადი თეორიის საკითხები.</p>
+                    <p>გასული საუკუნის 60-იან წლებამდე, კარტოგრაფია მომსახურე ტექნიკური დისციპლინის რანგში განიხილებოდა. მას არ ჰქონდა მიკუთვნებული თავისი ადგილი მეცნიერებათა საერთო საკლასიფიკაციო სისტემაში. 1968 წელს საქართველოს მეცნიერებათა აკადემიის გამომცემლობა „მეცნიერებამ", ქართულ ენაზე, გამოსცა ა. ასლანიკაშვილის მონოგრაფიული კვლევა „კარტოგრაფია ზოგადი თეორიის საკითხები". 1974 წელს რუსულ ენაზე გამოიცა მეორე მონოგრაფია „მეტაკარტოგრაფია. ძირითადი პრობლემები". ამ ორი ფუნდამენტური ნაშრომით მან კარტოგრაფიაში დაამკვიდრა „მეტაკარტოგრაფიის" კონცეფცია — მოძღვრება საგანზე, მეთოდსა და ენაზე. აქედან საფუძველი დაედო კარტოგრაფიის თეორიას და იშვა კარტოგრაფია, როგორც აკადემიური მეცნიერება.</p>
+                    <p>პროფესორმა ალექსანდრე ასლანიკაშვილმა დაამუშავა კარტოგრაფიის დიდი ტრიადა: საგანი, მეთოდი და ენა. მან კარტოგრაფია განსაზღვრა, როგორც ობიექტური სინამდვილის კონკრეტული სივრცისა და მისი დროული ცვალებადობის შემმეცნებელი მეცნიერება. წარმოდგენილია კარტოგრაფიის შინაგანი სტრუქტური სქემა ორი ქვესისტემით: ა) გეოგრაფიული კარტოგრაფია და ბ) ასტრონომიული კარტოგრაფია.</p>
+                    <p>ა. ასლანიკაშვილმა ზოგადფილოსოფიურ საწყისებზე გამოიკვლია კარტოგრაფიის მეთოდოლოგიური საფუძვლები. მეტაკარტოგრაფიის კონცეპტუალურ სისტემაში დაამუშავა შედარების, ანალიზის, სინთეზის, აბსტრაჰირების, განზოგადებისა და მოდელირების კარტოგრაფიული ფორმები. კარტოგრაფიული გენერალიზაციის პროცესი ორ ნაწილად წარმოადგინა: კარტოგრაფიული აბსტრაჰირება და კარტოგრაფიული განზოგადება.</p>
+                    <p>ცალკე აღნიშვნას იმსახურებს ა. ასლანიკაშვილის მიერ რუკის ენის, როგორც სპეციფიკური ნიშნობრივი სისტემის კვლევა. მან, კარტოგრაფიის პრაქტიკული მაგალითების საფუძველზე პირველმა, შეისწავლა და გამოიკვლია რუკის ენის სინტაქსური, სემანტიკური, სიგმატიკური და პრაგმატიკული სემიოტიკური ასპექტები. მის ძირითად ნაშრომს „მეტაკარტოგრაფია. ძირითადი პრობლემები" ხშირად იმოწმებენ ცნობილი უცხოელი მეცნიერ-კარტოგრაფები.</p>
+                    <p>თავისი თეორიულ-კარტოგრაფიული კვლევების საფუძველზე, პროფესორი ალექსანდრე ასლანიკაშვილი სრულიად სამართლიანად ითვლება კარტოგრაფიის თეორიის ფუძემდებლად.</p>
+                </div>
+
+                <!-- English biography -->
+                <div class="bio-text bio-en bio-hidden">
+                    <p>The famous Georgian cartographer, Doctor of Geographical Sciences, and Professor Alexander Aslanikashvili is considered the founder of cartographic theory. He was the first to develop the general theory of cartography.</p>
+                    <p>Until the 1960s, cartography was considered an auxiliary technical discipline without a place in the general classification of sciences. In 1968, the publishing house of the Georgian Academy of Sciences, "Metsniereba", published Aslanikashvili's monographic study "Cartography, Issues of General Theory" in Georgian. In 1974 the same publisher released his second monograph, "Metacartography. Main Problems", in Russian. With these two fundamental works he established the first concept in cartography called "metacartography" — a doctrine on the subject, method and language of cartography — and thus laid the foundations of cartographic theory, giving birth to cartography as an academic science.</p>
+                    <p>Professor Aslanikashvili developed the great triad of cartography: subject, method and language. He defined cartography as a science that comprehends the specific space of objective reality and its temporal variability, and presented a new internal structure of cartography consisting of two main subsystems: a) geographical cartography and b) astronomical cartography.</p>
+                    <p>On a general philosophical basis, Aslanikashvili explored the methodological foundations of cartography. Within his conceptual system of metacartography he developed cartographic forms of comparison, analysis, synthesis, abstraction, generalisation and modelling, presenting the process of cartographic generalisation in two parts: cartographic abstraction and cartographic generalisation.</p>
+                    <p>Particularly noteworthy is his study of the language of maps as a specific symbolic system. He was the first to identify and investigate the syntactic, semantic, sigmatic and pragmatic semiotic aspects of the language of maps based on practical examples. His principal work, "Metacartography. Main Problems", is frequently cited by renowned foreign cartographers. In 1999, Japanese cartographers led by Professor Toshitomo Kanakubo translated and published it in Japanese.</p>
+                    <p>Based on his theoretical and cartographic research, Professor Alexander Aslanikashvili is rightfully considered the founder of cartographic theory.</p>
+                </div>
+
+            </div><!-- /bio-modal-content -->
+        </div><!-- /bio-modal-inner -->
+    </div><!-- /bio-modal -->
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Georgian Cartographers Association</h3>
+                <p data-lang="ka">საქართველოს კარტოგრაფთა ასოციაცია აერთიანებს პროფესიონალებს კარტოგრაფიის, GIS-ისა და გეოინფორმატიკის სფეროდან.</p>
+                <p data-lang="en">The GCA brings together professionals from cartography, GIS and geoinformatics.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=61556291459201" target="_blank">f</a>
+                    <a href="https://www.instagram.com/gca_ska" target="_blank">📷</a>
+                    <a href="https://www.youtube.com/@GeorgianCartographersAssoc" target="_blank">▶</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4 data-lang="ka">ნავიგაცია</h4>
+                <h4 data-lang="en">Navigation</h4>
+                <ul>
+                    <li><a href="#about" data-lang="ka">შესახებ</a><a href="#about" data-lang="en">About</a></li>
+                    <li><a href="#organizers" data-lang="ka">ორგანიზატორები</a><a href="#organizers" data-lang="en">Organizers</a></li>
+                    <li><a href="#programme" data-lang="ka">პროგრამა</a><a href="#programme" data-lang="en">Programme</a></li>
+                    <li><a href="#venue" data-lang="ka">ადგილი</a><a href="#venue" data-lang="en">Venue</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4 data-lang="ka">რესურსები</h4>
+                <h4 data-lang="en">Resources</h4>
+                <ul>
+                    <li><a href="#registration" data-lang="ka">რეგისტრაცია</a><a href="#registration" data-lang="en">Registration</a></li>
+                    <li><a href="#submission" data-lang="ka">გაგზავნა</a><a href="#submission" data-lang="en">Submission</a></li>
+                    <li><a href="#proceedings" data-lang="ka">გამოქვეყნება</a><a href="#proceedings" data-lang="en">Proceedings</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4 data-lang="ka">კონტაქტი</h4>
+                <h4 data-lang="en">Contact</h4>
+                <ul>
+                    <li><a href="mailto:geocartographersassoc@gmail.com">geocartographersassoc@gmail.com</a></li>
+                    <li data-lang="ka">ი. ჭავჭავაძის გამზ. 3, თბილისი 0128</li>
+                    <li data-lang="en">I. Chavchavadze Ave. 3, Tbilisi 0128</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-lang="ka">© 2026 საქართველოს კარტოგრაფთა ასოციაცია. ყველა უფლება დაცულია.</p>
+            <p data-lang="en">© 2026 Georgian Cartographers Association. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="assets/js/main.js?v=2"></script>
+</body>
+</html>

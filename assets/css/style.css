@@ -1037,6 +1037,41 @@ body.en .nav-cta[data-lang="en"] {
     letter-spacing: 0.3px;
 }
 
+.schedule-pdf {
+    text-align: center;
+    padding: 2.5rem 0 0.5rem;
+}
+
+.schedule-pdf-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 50px;
+    background: var(--gradient-gold);
+    color: var(--midnight);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(214, 158, 46, 0.35);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.schedule-pdf-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(214, 158, 46, 0.45);
+}
+
+.schedule-pdf-link:focus-visible {
+    outline: 3px solid var(--gold-light);
+    outline-offset: 3px;
+}
+
+.schedule-pdf-link small {
+    font-weight: 500;
+    opacity: 0.75;
+}
+
 /* ===== Tour ===== */
 
 .tour-content {

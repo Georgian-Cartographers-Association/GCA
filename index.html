@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="assets/tour-map/tour-map.css">
     <link rel="stylesheet" href="assets/css/style.css?v=3">
 </head>
 <body>
@@ -542,7 +543,7 @@
                 <h2 class="section-title" data-lang="en">Guided Tour</h2>
             </div>
             <div class="tour-content">
-                <div class="tour-image">🗺️</div>
+                <div class="tour-image" data-tour-map></div>
                 <div class="tour-info">
                     <div class="tour-details">
                         <div class="tour-detail">
@@ -1158,6 +1159,8 @@
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="assets/tour-map/bolnisi-data.js"></script>
+    <script src="assets/tour-map/tour-map.js"></script>
     <script src="assets/js/main.js?v=2"></script>
 </body>
 </html>

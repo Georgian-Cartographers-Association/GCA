@@ -18,6 +18,8 @@
             stops: 'გაჩერებები', route: 'მარშრუტი (მიახლოებითი)',
             churches: 'ეკლესიები და მონასტრები', castles: 'ციხეები და კოშკები',
             settl: 'დასახლებები', bnd: 'მუნიციპალიტეტის საზღვარი',
+            secVine: 'მევენახეობა', vine: 'ვაზის ჯიშების არეალი', vineKind: 'ვაზის გავრცელების არეალი',
+            vineSrc: 'წყარო: ბოლნისის ვაზის გავრცელების რუკა', ha: 'ჰა',
             map: 'რუკა', terrain: 'რელიეფი', sat: 'თანამგზავრი',
             stop: 'გაჩერება', start: 'გამგზავრება',
             routeInfo: (km, min) => `<b>≈ ${km} კმ</b> · დაახლ. <b>${Math.floor(min / 60)} სთ ${min % 60} წთ</b> ავტობუსით (გაჩერებების გარეშე)`,
@@ -36,6 +38,8 @@
             stops: 'Stops', route: 'Route (approximate)',
             churches: 'Churches & monasteries', castles: 'Fortresses & towers',
             settl: 'Settlements', bnd: 'Municipality boundary',
+            secVine: 'Viticulture', vine: 'Grape variety zones', vineKind: 'Grape variety zone',
+            vineSrc: 'Source: Bolnisi grapevine distribution map', ha: 'ha',
             map: 'Map', terrain: 'Terrain', sat: 'Satellite',
             stop: 'Stop', start: 'Departure',
             routeInfo: (km, min) => `<b>≈ ${km} km</b> · about <b>${Math.floor(min / 60)} h ${min % 60} min</b> by coach (driving only)`,
@@ -128,6 +132,7 @@
 
         /* ---- Panes so the stacking order is predictable ---- */
         map.createPane('btm-mask').style.zIndex = 350;
+        map.createPane('btm-vine').style.zIndex = 400;
         map.createPane('btm-route').style.zIndex = 420;
         map.createPane('btm-settl').style.zIndex = 590;
         map.createPane('btm-sites').style.zIndex = 610;
@@ -141,6 +146,22 @@
             L.polygon(D.boundary, { pane: 'btm-mask', color: '#c53030', weight: 2.5, dashArray: '8 5', fill: false, interactive: false })
         ]).addTo(map);
         const bndBounds = L.latLngBounds(outer.flat());
+
+        /* ---- Grape variety zones ---- */
+        const fmt = n => n.toLocaleString(lang === 'ka' ? 'ka-GE' : 'en-GB');
+        const vineGroup = L.layerGroup();
+        (D.vine || []).forEach(v => {
+            const style = { pane: 'btm-vine', color: v.color, weight: 1.5, opacity: 0.9, fillColor: v.color, fillOpacity: 0.42 };
+            const poly = L.polygon(v.rings, style).addTo(vineGroup);
+            poly.bindPopup(() => `<div class="btm-pop-kind">${t().vineKind}</div><div class="btm-pop-name">${esc(v[lang])}</div>` +
+                `<div class="btm-pop-alt">${esc(v[lang === 'ka' ? 'en' : 'ka'])}</div>` +
+                `<div class="btm-pop-desc">≈ ${fmt(v.ha)} ${t().ha}</div><div class="btm-pop-src">${t().vineSrc}</div>`);
+            poly.bindTooltip('', { className: 'btm-tip', sticky: true });
+            relabelers.push(() => poly.setTooltipContent(esc(v[lang])));
+            poly.on('mouseover', () => poly.setStyle({ fillOpacity: 0.62, weight: 2.5 }));
+            poly.on('mouseout', () => poly.setStyle(style));
+        });
+        if (D.vine && D.vine.length) vineGroup.addTo(map);
 
         /* ---- Route ---- */
         const routeGroup = L.layerGroup([
@@ -233,6 +254,7 @@
             { key: 'route', group: routeGroup, sw: '<span class="btm-sw-route"></span>', sec: 'secTour' },
             { key: 'churches', group: churchGroup, sw: `<span class="btm-pin btm-pin-church" style="width:22px;height:22px"><img src="${iconBase}church.png" alt="" style="width:13px;height:13px"></span>`, sec: 'secSites' },
             { key: 'castles', group: castleGroup, sw: `<span class="btm-pin btm-pin-castle" style="width:22px;height:22px"><img src="${iconBase}castle.png" alt="" style="width:13px;height:13px"></span>`, sec: 'secSites' },
+            { key: 'vine', group: vineGroup, sw: '<span class="btm-sw-vine"></span>', sec: 'secVine', sub: D.vine },
             { key: 'settl', group: settlGroup, sw: '<span class="btm-sw-town"></span>', sec: 'secOther' },
             { key: 'bnd', group: boundaryGroup, sw: '<span class="btm-sw-bnd"></span>', sec: 'secOther' }
         ];
@@ -242,10 +264,14 @@
 
         function renderLegend() {
             let html = '', sec = '';
-            layers.forEach(l => {
+            layers.filter(l => !l.sub || l.sub.length).forEach(l => {
                 if (l.sec !== sec) { sec = l.sec; html += `<h5>${t()[sec]}</h5>`; }
                 html += `<label class="btm-row"><input type="checkbox" data-layer="${l.key}" ${map.hasLayer(l.group) ? 'checked' : ''}>` +
                     `<span class="btm-sw">${l.sw}</span><span>${t()[l.key]}</span></label>`;
+                if (l.sub) {
+                    html += '<ul class="btm-sub">' + l.sub.map(v =>
+                        `<li><span class="btm-sub-sw" style="background:${v.color}"></span>${esc(v[lang])}</li>`).join('') + '</ul>';
+                }
             });
             html += `<h5>${t().secBase}</h5><div class="btm-bases">` +
                 Object.keys(bases).map(k => `<button type="button" class="btm-base" data-base="${k}" aria-pressed="${k === baseKey}">${t()[k]}</button>`).join('') +

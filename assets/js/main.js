@@ -115,3 +115,43 @@ function setBioLang(lang) {
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeBioModal();
 });
+
+// Gallery slider
+(function () {
+    const root = document.getElementById('gallerySlider');
+    if (!root) return;
+    const track = root.querySelector('.gallery-track');
+    const slides = root.querySelectorAll('.gallery-slide');
+    const dots = root.querySelector('.gallery-dots');
+    let index = 0;
+
+    slides.forEach((_, i) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', (i + 1) + ' / ' + slides.length);
+        b.addEventListener('click', () => goTo(i));
+        dots.appendChild(b);
+    });
+
+    function mark() {
+        dots.querySelectorAll('button').forEach((b, i) => b.classList.toggle('active', i === index));
+    }
+
+    function goTo(i) {
+        const n = (i + slides.length) % slides.length;
+        track.scrollTo({ left: n * track.clientWidth, behavior: 'smooth' });
+    }
+
+    track.addEventListener('scroll', () => {
+        index = Math.round(track.scrollLeft / track.clientWidth);
+        mark();
+    }, { passive: true });
+
+    root.querySelector('.gallery-prev').addEventListener('click', () => goTo(index - 1));
+    root.querySelector('.gallery-next').addEventListener('click', () => goTo(index + 1));
+    root.addEventListener('keydown', e => {
+        if (e.key === 'ArrowLeft') goTo(index - 1);
+        if (e.key === 'ArrowRight') goTo(index + 1);
+    });
+    mark();
+})();

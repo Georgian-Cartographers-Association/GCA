@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="assets/tour-map/tour-map.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=4">
+    <link rel="stylesheet" href="assets/css/style.css?v=5">
 </head>
 <body>
 
@@ -37,6 +37,10 @@
                 <li>
                     <a href="#tour" class="nav-link" data-lang="ka">ექსკურსია</a>
                     <a href="#tour" class="nav-link" data-lang="en">Tour</a>
+                </li>
+                <li>
+                    <a href="#gallery" class="nav-link" data-lang="ka">გალერეა</a>
+                    <a href="#gallery" class="nav-link" data-lang="en">Gallery</a>
                 </li>
                 <li>
                     <a href="#submission" class="nav-link" data-lang="ka">გაგზავნა</a>
@@ -566,6 +570,76 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section section-alt" id="gallery">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-lang="ka">ფოტოგალერეა</span>
+                <span class="section-label" data-lang="en">Photo Gallery</span>
+                <h2 class="section-title" data-lang="ka">პირველი საერთაშორისო კონფერენცია „კარტოგრაფია და თანამედროვეობა“</h2>
+                <h2 class="section-title" data-lang="en">First International Conference “Cartography and Modernity”</h2>
+                <p class="section-subtitle" data-lang="ka">29 - 31 ოქტომბერი, 2026. თბილისი, საქართველო</p>
+                <p class="section-subtitle" data-lang="en">October 29 - 31, 2026. Tbilisi, Georgia</p>
+            </div>
+            <div class="gallery" id="gallerySlider" tabindex="0">
+                <div class="gallery-track">
+                    <div class="gallery-slide" style="background-image:url('assets/images/gallery/gallery-01.jpg')">
+                        <img src="assets/images/gallery/gallery-01.jpg" alt="">
+                    </div>
+                    <div class="gallery-slide" style="background-image:url('assets/images/gallery/gallery-02.jpg')">
+                        <img src="assets/images/gallery/gallery-02.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="gallery-slide" style="background-image:url('assets/images/gallery/gallery-03.jpg')">
+                        <img src="assets/images/gallery/gallery-03.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="gallery-slide" style="background-image:url('assets/images/gallery/gallery-04.jpg')">
+                        <img src="assets/images/gallery/gallery-04.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="gallery-slide" style="background-image:url('assets/images/gallery/gallery-05.jpg')">
+                        <img src="assets/images/gallery/gallery-05.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="gallery-slide" style="background-image:url('assets/images/gallery/gallery-06.jpg')">
+                        <img src="assets/images/gallery/gallery-06.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="gallery-slide" style="background-image:url('assets/images/gallery/gallery-07.jpg')">
+                        <img src="assets/images/gallery/gallery-07.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="gallery-slide" style="background-image:url('assets/images/gallery/gallery-08.jpg')">
+                        <img src="assets/images/gallery/gallery-08.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="gallery-slide" style="background-image:url('assets/images/gallery/gallery-09.jpg')">
+                        <img src="assets/images/gallery/gallery-09.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="gallery-slide" style="background-image:url('assets/images/gallery/gallery-10.jpg')">
+                        <img src="assets/images/gallery/gallery-10.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="gallery-slide" style="background-image:url('assets/images/gallery/gallery-11.jpg')">
+                        <img src="assets/images/gallery/gallery-11.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="gallery-slide" style="background-image:url('assets/images/gallery/gallery-12.jpg')">
+                        <img src="assets/images/gallery/gallery-12.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="gallery-slide" style="background-image:url('assets/images/gallery/gallery-13.jpg')">
+                        <img src="assets/images/gallery/gallery-13.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="gallery-slide" style="background-image:url('assets/images/gallery/gallery-14.jpg')">
+                        <img src="assets/images/gallery/gallery-14.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="gallery-slide" style="background-image:url('assets/images/gallery/gallery-15.jpg')">
+                        <img src="assets/images/gallery/gallery-15.jpg" alt="" loading="lazy">
+                    </div>
+                </div>
+                <button class="gallery-arrow gallery-prev" type="button" aria-label="Previous">&#8249;</button>
+                <button class="gallery-arrow gallery-next" type="button" aria-label="Next">&#8250;</button>
+                <div class="gallery-dots"></div>
+            </div>
+            <div class="gallery-more">
+                <a class="btn btn-primary" data-lang="ka" href="https://photos.app.goo.gl/TgJeWid31uXfhodu5" target="_blank" rel="noopener noreferrer">სრული ალბომი ↗</a>
+                <a class="btn btn-primary" data-lang="en" href="https://photos.app.goo.gl/TgJeWid31uXfhodu5" target="_blank" rel="noopener noreferrer">Full album ↗</a>
             </div>
         </div>
     </section>
@@ -1161,6 +1235,6 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="assets/tour-map/bolnisi-data.js"></script>
     <script src="assets/tour-map/tour-map.js"></script>
-    <script src="assets/js/main.js?v=2"></script>
+    <script src="assets/js/main.js?v=3"></script>
 </body>
 </html>
